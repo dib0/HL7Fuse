@@ -1,0 +1,14 @@
+1. Release notes Hl7Fuse
+
+2. Functionality
+
+3. Dependencies
+HL7Fuse is base on the following projects:
+- SuperSocket 1.6
+- NHapi 2.4
+- NHapiTools 1.1
+
+4. Changelog
+- V1.0 Release (TBD 2014)
+  khasdklashdfklhashfashfhljshfkjlashdfhasfhashfkjlhasf
+  lasdjf;kljdasf;jasfjas;jdf;kljasfj;klasjdf;klj
