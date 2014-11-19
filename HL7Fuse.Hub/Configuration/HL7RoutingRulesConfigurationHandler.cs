@@ -18,9 +18,12 @@ namespace HL7Fuse.Hub.Configuration
 
             foreach (XmlNode node in section.ChildNodes)
             {
-                if (node.Name.ToLower() == "rule")
+                if (node.NodeType != XmlNodeType.Comment)
                 {
-                    result.Add(GetRoutingRule(node));
+                    if (node.Name.ToLower() == "rule")
+                    {
+                        result.Add(GetRoutingRule(node));
+                    }
                 }
             }
 

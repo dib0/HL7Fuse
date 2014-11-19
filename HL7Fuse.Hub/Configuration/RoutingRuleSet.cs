@@ -29,12 +29,14 @@ namespace HL7Fuse.Hub.Configuration
 
             foreach (XmlNode node in childnodes)
             {
-                RoutingRule rule = new RoutingRule();
-                rule.Include = (node.Name == "include");
-                rule.Hl7Version = node.Attributes["hl7Version"].Value;
-                rule.Structurename = node.Attributes["structurename"].Value;
-                rules.Add(rule);
-
+                if (node.NodeType != XmlNodeType.Comment)
+                {
+                    RoutingRule rule = new RoutingRule();
+                    rule.Include = (node.Name == "include");
+                    rule.Hl7Version = node.Attributes["hl7Version"].Value;
+                    rule.Structurename = node.Attributes["structurename"].Value;
+                    rules.Add(rule);
+                }
             }
         }
         #endregion

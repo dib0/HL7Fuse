@@ -1,14 +1,26 @@
-1. Release notes Hl7Fuse
+1. Release notes HL7Fuse
 
 2. Functionality
+HL7Fuse is a "Swiss pocketknife" for your HL7 development needs in the .Net framework. HL7Fuse is based on SuperSocket in combination with NHapi and NHapiTools.
+This combination provides a powerful and solid base to build you HL7 application or HL7 test framework. In fact, if you use HL7Fuse as is, it can function as a 
+message hub, so you can receive one message and send this (using filters) to many client systems.
+
+Features:
+- Open Source (thus free)
+- Uses HL7 standards
+- Can be used as a test server for your HL7 development environment
+- Can function as message hub for HL7 communication
+- Can be used as a full featured basis for any HL7 program that you need to build in .Net
+- Provides security through TLS/SSL
+- Provides MLLP/TCP (secure connection possible) start point
+- Provides SSL/HTTP/MLLP/File end points, and allows custom backend protocol implementations
 
 3. Dependencies
-HL7Fuse is base on the following projects:
+HL7Fuse is using the following projects:
 - SuperSocket 1.6
 - NHapi 2.4
-- NHapiTools 1.1
+- NHapiTools 1.3
 
 4. Changelog
 - V1.0 Release (TBD 2014)
-  khasdklashdfklhashfashfhljshfkjlashdfhasfhashfkjlhasf
-  lasdjf;kljdasf;jasfjas;jdf;kljasfj;klasjdf;klj
+	First release of HL7Fuse including MLLP support, SSL, routing rules and message manipulation interface for routing.

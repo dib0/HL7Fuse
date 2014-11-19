@@ -19,7 +19,7 @@ namespace HL7Fuse.Hub.Configuration
 
             foreach (XmlNode node in section.ChildNodes)
             {
-                if (node.Name != "#comment")
+                if (node.NodeType != XmlNodeType.Comment)
                 {
                     switch (node.Name)
                     {
