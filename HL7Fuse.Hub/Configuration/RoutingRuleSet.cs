@@ -35,6 +35,16 @@ namespace HL7Fuse.Hub.Configuration
                     rule.Include = (node.Name == "include");
                     rule.Hl7Version = node.Attributes["hl7Version"].Value;
                     rule.Structurename = node.Attributes["structurename"].Value;
+
+                    if (node.Attributes["fieldFilter"] != null)
+                    {
+                        if (node.Attributes["fieldFilterValue"] == null)
+                            throw new ArgumentNullException("If fieldFilter is used in a routing rule, the fieldFilterValue must be set.");
+
+                        rule.FieldFilter = node.Attributes["fieldFilter"].Value;
+                        rule.FieldFilterValue = node.Attributes["fieldFilterValue"].Value;
+                    }
+
                     rules.Add(rule);
                 }
             }
