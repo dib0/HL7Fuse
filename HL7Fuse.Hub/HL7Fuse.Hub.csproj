@@ -55,6 +55,7 @@
     <Compile Include="Configuration\HL7RoutingRulesConfigurationHandler.cs" />
     <Compile Include="Configuration\EndPointConfigurationHandler.cs" />
     <Compile Include="Configuration\RoutingRuleSet.cs" />
+    <Compile Include="Configuration\RuleValidationMethod.cs" />
     <Compile Include="EndPoints\BaseEndPoint.cs" />
     <Compile Include="EndPoints\CustomEndPoint.cs" />
     <Compile Include="EndPoints\SSLClientEndPoint.cs" />

@@ -178,7 +178,8 @@ namespace HL7Fuse.Hub
                     if (endp.Key != null)
                     {
                         Logger.DebugFormat("Endpoint '{0}' is relevant for '{1}'.", endp.Key, message.GetStructureName());
-                        endpoints.Add(endp.Key, endp.Value);
+                        if (!endpoints.ContainsKey(endp.Key))
+                            endpoints.Add(endp.Key, endp.Value);
                     }
                 }
                 else

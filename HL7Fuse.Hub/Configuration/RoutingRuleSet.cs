@@ -12,9 +12,32 @@ namespace HL7Fuse.Hub.Configuration
     {
         #region Private properties
         private List<RoutingRule> rules;
+        private RuleValidationMethod validationMethod;
         #endregion
 
         #region Public properties
+        public string RouteOnValidRules
+        {
+            get
+            {
+                return Enum.GetName(typeof(RuleValidationMethod), validationMethod);
+            }
+            set
+            {
+                switch (value.ToLower())
+                {
+                    case "all" :
+                        validationMethod = RuleValidationMethod.All;
+                        break;
+                    case "any" :
+                        validationMethod = RuleValidationMethod.Any;
+                        break;
+                    default :
+                        throw new Exception(string.Format("Unknown value {0} for Rule validation method.", value));
+                }
+            }
+        }
+
         public string EndPoint
         {
             get;
@@ -54,15 +77,26 @@ namespace HL7Fuse.Hub.Configuration
         #region Public methods
         public bool IncludeEndpoint(IMessage message)
         {
-            bool result = true;
+            bool result = false;
+            if (validationMethod == RuleValidationMethod.All)
+                result = true;
 
             // Run include rules
             List<RoutingRule> incRules = rules.Where(r => r.Include).ToList();
             foreach (RoutingRule rule in incRules)
             {
-                // If any include rules match, this endpoint is applicable
-                if (rule.Match(message))
-                    result = true;
+                if (validationMethod == RuleValidationMethod.All)
+                {
+                    // If all include rules match, this endpoint is applicable
+                    if (!rule.Match(message))
+                        result = false;
+                }
+                else
+                {
+                    // If any include rules match, this endpoint is applicable
+                    if (rule.Match(message))
+                        result = true;
+                }
             }
 
             if (result)
