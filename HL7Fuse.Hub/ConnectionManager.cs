@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using HL7Fuse.Hub.Configuration;
 using HL7Fuse.Hub.EndPoints;
+using HL7Fuse.Hub.Handling;
 using HL7Fuse.Logging;
 using NHapi.Base.Model;
 using SuperSocket.SocketBase.Logging;
@@ -24,6 +27,7 @@ namespace HL7Fuse.Hub
         private ThreadStart queueThreadStart = null;
         private Thread queueThread=null;
         private int retrySleep, retryCount;
+        private IMessageHandler messageHandler;
         #endregion
 
         #region Public properties
@@ -46,6 +50,7 @@ namespace HL7Fuse.Hub
 
             LoadEndPoints();
             LoadRoutingRules();
+            LoadMessageHandler();
 
             // Start queue thread
             queueThreadStart = new ThreadStart(HandleQueue);
@@ -84,6 +89,32 @@ namespace HL7Fuse.Hub
             routingRules = (List<RoutingRuleSet>)ConfigurationManager.GetSection("messageRouting");
         }
 
+        private void LoadMessageHandler()
+        {
+            string handlerImplementation = ConfigurationManager.AppSettings["HubMessageHandler"];
+            if (!string.IsNullOrWhiteSpace(handlerImplementation))
+            {
+                string[] typeNames = handlerImplementation.Split(',');
+                if (typeNames.Count() < 2)
+                    throw new Exception("Type name and Assemblyname not correctly configured for Message handler.");
+
+                string className = typeNames[0].Trim();
+                string assembly = string.Empty;
+                for (int i=1; i < typeNames.Count(); i++)
+                {
+                    if (!string.IsNullOrWhiteSpace(assembly))
+                        assembly += ", ";
+                    assembly += typeNames[i].Trim();
+                }
+
+                ObjectHandle oh = Activator.CreateInstance(assembly, className);
+                if (oh is IMessageHandler)
+                    messageHandler = oh as IMessageHandler;
+                else
+                    throw new Exception("Message handler is not of type IMessageHandler.");
+            }
+        }
+
         private void HandleQueue()
         {
             Logger.Debug("Processing queue.");
@@ -94,7 +125,9 @@ namespace HL7Fuse.Hub
                     item = queue.Dequeue();
                 Logger.InfoFormat("Processing {0} message.", item.GetStructureName());
                 
-//TODO: add IMessageHandler handling
+                // Call the message handler, if available, to process the message
+                if (messageHandler != null)
+                    item = messageHandler.HandleMessage(item);
 
                 // Send the message to the relevant end points
                 Dictionary<string, IEndPoint> endpoints = GetRelevantEndPoints(item);
