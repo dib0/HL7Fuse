@@ -132,9 +132,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)Solution Items\NHapi\*.dll" $(TargetDir) /Y
-xcopy "$(SolutionDir)Solution Items\SuperSocket\*.dll" $(TargetDir) /Y
-xcopy "$(SolutionDir)Solution Items\SuperSocket\*.exe" $(TargetDir) /Y
+    <PostBuildEvent>xcopy "$(SolutionDir)Solution Items\NHapi\*.*" $(TargetDir) /Y
+xcopy "$(SolutionDir)Solution Items\NHapiTools\*.*" $(TargetDir) /Y
+xcopy "$(SolutionDir)Solution Items\SuperSocket\*.*" $(TargetDir) /Y
 md $(TargetDir)Config
 md $(TargetDir)Logs
 xcopy "$(SolutionDir)Solution Items\SuperSocket\Config\*.*" $(TargetDir)Config /Y</PostBuildEvent>

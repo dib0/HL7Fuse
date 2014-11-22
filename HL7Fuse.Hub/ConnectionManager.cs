@@ -107,7 +107,7 @@ namespace HL7Fuse.Hub
                     assembly += typeNames[i].Trim();
                 }
 
-                ObjectHandle oh = Activator.CreateInstance(assembly, className);
+                Object oh = Activator.CreateInstance(assembly, className).Unwrap();
                 if (oh is IMessageHandler)
                     messageHandler = oh as IMessageHandler;
                 else

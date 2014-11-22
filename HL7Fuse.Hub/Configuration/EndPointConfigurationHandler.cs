@@ -100,12 +100,20 @@ namespace HL7Fuse.Hub.Configuration
         private IEndPoint GetCustomEndPoint(XmlNode node)
         {
             string customType = node.Attributes["type"].Value;
-            string[] cType = customType.Split(',');
-
-            if (cType.Count() != 2)
+            string[] typeNames = customType.Split(',');
+            if (typeNames.Count() < 2)
                 throw new Exception("Invalid type definition for custom end point in the configuration file.");
 
-            CustomEndPoint result = (CustomEndPoint) Activator.CreateInstance(cType[1], cType[0]).Unwrap();
+            string className = typeNames[0].Trim();
+            string assembly = string.Empty;
+            for (int i = 1; i < typeNames.Count(); i++)
+            {
+                if (!string.IsNullOrWhiteSpace(assembly))
+                    assembly += ", ";
+                assembly += typeNames[i].Trim();
+            }
+
+            CustomEndPoint result = (CustomEndPoint) Activator.CreateInstance(assembly, className).Unwrap();
             // Run the setup
             result.Setup(node.ChildNodes);
 
