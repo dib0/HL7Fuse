@@ -46,6 +46,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapi", "NHapi", "{B703F169
 		Solution Items\NHapi\NHapi.Base.dll = Solution Items\NHapi\NHapi.Base.dll
 		Solution Items\NHapi\NHapi.Base.pdb = Solution Items\NHapi\NHapi.Base.pdb
 		Solution Items\NHapi\NHapi.Base.xml = Solution Items\NHapi\NHapi.Base.xml
+		Solution Items\NHapi\NHapi.Model.V21.dll = Solution Items\NHapi\NHapi.Model.V21.dll
+		Solution Items\NHapi\NHapi.Model.V21.pdb = Solution Items\NHapi\NHapi.Model.V21.pdb
+		Solution Items\NHapi\NHapi.Model.V22.dll = Solution Items\NHapi\NHapi.Model.V22.dll
+		Solution Items\NHapi\NHapi.Model.V22.pdb = Solution Items\NHapi\NHapi.Model.V22.pdb
 		Solution Items\NHapi\NHapi.Model.V23.dll = Solution Items\NHapi\NHapi.Model.V23.dll
 		Solution Items\NHapi\NHapi.Model.V23.pdb = Solution Items\NHapi\NHapi.Model.V23.pdb
 		Solution Items\NHapi\NHapi.Model.V23.xml = Solution Items\NHapi\NHapi.Model.V23.xml
@@ -58,6 +62,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapi", "NHapi", "{B703F169
 		Solution Items\NHapi\NHapi.Model.V25.dll = Solution Items\NHapi\NHapi.Model.V25.dll
 		Solution Items\NHapi\NHapi.Model.V25.pdb = Solution Items\NHapi\NHapi.Model.V25.pdb
 		Solution Items\NHapi\NHapi.Model.V25.xml = Solution Items\NHapi\NHapi.Model.V25.xml
+		Solution Items\NHapi\NHapi.Model.V251.dll = Solution Items\NHapi\NHapi.Model.V251.dll
+		Solution Items\NHapi\NHapi.Model.V251.pdb = Solution Items\NHapi\NHapi.Model.V251.pdb
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapiTools", "NHapiTools", "{0EDA1336-E5AB-4EF0-A605-7E03D59F1FBE}"
@@ -65,6 +71,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapiTools", "NHapiTools", 
 		Solution Items\NHapiTools\NHapiTools.Base.dll = Solution Items\NHapiTools\NHapiTools.Base.dll
 		Solution Items\NHapiTools\NHapiTools.Base.pdb = Solution Items\NHapiTools\NHapiTools.Base.pdb
 		Solution Items\NHapiTools\NHapiTools.Base.XML = Solution Items\NHapiTools\NHapiTools.Base.XML
+		Solution Items\NHapiTools\NHapiTools.Model.V21.dll = Solution Items\NHapiTools\NHapiTools.Model.V21.dll
+		Solution Items\NHapiTools\NHapiTools.Model.V21.pdb = Solution Items\NHapiTools\NHapiTools.Model.V21.pdb
+		Solution Items\NHapiTools\NHapiTools.Model.V21.xml = Solution Items\NHapiTools\NHapiTools.Model.V21.xml
+		Solution Items\NHapiTools\NHapiTools.Model.V22.dll = Solution Items\NHapiTools\NHapiTools.Model.V22.dll
+		Solution Items\NHapiTools\NHapiTools.Model.V22.pdb = Solution Items\NHapiTools\NHapiTools.Model.V22.pdb
+		Solution Items\NHapiTools\NHapiTools.Model.V22.xml = Solution Items\NHapiTools\NHapiTools.Model.V22.xml
 		Solution Items\NHapiTools\NHapiTools.Model.V23.dll = Solution Items\NHapiTools\NHapiTools.Model.V23.dll
 		Solution Items\NHapiTools\NHapiTools.Model.V23.pdb = Solution Items\NHapiTools\NHapiTools.Model.V23.pdb
 		Solution Items\NHapiTools\NHapiTools.Model.V23.XML = Solution Items\NHapiTools\NHapiTools.Model.V23.XML
@@ -77,6 +89,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapiTools", "NHapiTools", 
 		Solution Items\NHapiTools\NHapiTools.Model.V25.dll = Solution Items\NHapiTools\NHapiTools.Model.V25.dll
 		Solution Items\NHapiTools\NHapiTools.Model.V25.pdb = Solution Items\NHapiTools\NHapiTools.Model.V25.pdb
 		Solution Items\NHapiTools\NHapiTools.Model.V25.XML = Solution Items\NHapiTools\NHapiTools.Model.V25.XML
+		Solution Items\NHapiTools\NHapiTools.Model.V251.dll = Solution Items\NHapiTools\NHapiTools.Model.V251.dll
+		Solution Items\NHapiTools\NHapiTools.Model.V251.pdb = Solution Items\NHapiTools\NHapiTools.Model.V251.pdb
+		Solution Items\NHapiTools\NHapiTools.Model.V251.xml = Solution Items\NHapiTools\NHapiTools.Model.V251.xml
 		Solution Items\NHapiTools\Release notes.txt = Solution Items\NHapiTools\Release notes.txt
 	EndProjectSection
 EndProject
