@@ -22,6 +22,9 @@ HL7Fuse is using the following projects:
 - NHapiTools 1.4
 
 4. Changelog
+- V1.1.0.1
+	Fixed bug in reading the routing rules configuration.
+
 - V1.1 Release (December 2014)
 	Added support for more HL7 version. Fixed multiple bigs, with thanks for finding, reporting and testing to James Bateman.
 

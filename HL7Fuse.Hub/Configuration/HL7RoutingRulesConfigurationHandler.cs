@@ -36,6 +36,7 @@ namespace HL7Fuse.Hub.Configuration
         {
             RoutingRuleSet rule = new RoutingRuleSet(node.ChildNodes);
             rule.EndPoint = node.Attributes["endpoint"].Value;
+            rule.RouteOnValidRules = node.Attributes["routeOnValidRules"].Value;
 
             return rule;
         }
