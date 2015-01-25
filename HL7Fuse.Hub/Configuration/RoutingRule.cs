@@ -50,7 +50,16 @@ namespace HL7Fuse.Hub.Configuration
 
             result = Compare(Hl7Version, message.Version);
             if (result)
-                result = Compare(Structurename, message.GetStructureName());
+            {
+                // Dib0 20150125: Changed the compare. This method doesn't work with messages
+                // that are parsed as generic messages
+                //result = Compare(Structurename, message.GetStructureName());
+
+                Terser terser = new Terser(message);
+                string messageType = string.Format("{0}_{1}", terser.Get("MSH-9-1"), terser.Get("MSH-9-2"));
+
+                result = Compare(Structurename, messageType);
+            }
 
             // Check the field filter
             if (result)
