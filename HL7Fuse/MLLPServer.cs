@@ -15,22 +15,14 @@ namespace HL7Fuse
         public MLLPServer() : base (new DefaultReceiveFilterFactory<MLLPBeginEndMarkReceiveFilter, HL7RequestInfo>())
         { }
 
-        protected override void OnStarted()
-        {
-            base.OnStarted();
-        }
-
-        protected override void OnStopped()
-        {
-            base.OnStopped();
-        }
-
         protected override void ExecuteCommand(MLLPSession session, HL7RequestInfo requestInfo)
         {
             try
             {
                 base.ExecuteCommand(session, requestInfo);
-                session.Send(requestInfo);
+
+                if (!requestInfo.WasUnknownRequest)
+                    session.Send(requestInfo);
             }
             catch (Exception e)
             {

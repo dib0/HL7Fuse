@@ -28,6 +28,12 @@ namespace HL7Fuse.Protocol
             set;
         }
 
+        public bool WasUnknownRequest
+        {
+            get;
+            set;
+        }
+
         public bool HasError
         {
             get

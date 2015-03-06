@@ -11,11 +11,33 @@ using NHapi.Base.Parser;
 using NHapiTools.Base.Util;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Protocol;
+using System.IO;
 
 namespace HL7Fuse
 {
-    public class MLLPSession : AppSession<MLLPSession, HL7RequestInfo>
+    public class FileSession : AppSession<FileSession, HL7RequestInfo>
     {
+        #region Private properties
+        private string outDirectory;
+        #endregion
+
+        #region Public properties
+        public string OutDirectory
+        {
+            get
+            {
+                return outDirectory;
+            }
+            set
+            {
+                if (!value.EndsWith("/") && !value.EndsWith("\\"))
+                    outDirectory = value + "\\";
+                else
+                    outDirectory = value;
+            }
+        }
+        #endregion
+
         #region Private properties
         private bool AcceptEventIfNotImplemented
         {
@@ -70,9 +92,11 @@ namespace HL7Fuse
         /// <param name="message"></param>
         public override void Send(string message)
         {
-            message = MLLP.CreateMLLPMessage(message);
-
-            base.Send(message);
+            if (!string.IsNullOrEmpty(OutDirectory))
+            {
+                using (StreamWriter sw = new StreamWriter(outDirectory + DateTime.Now.Ticks.ToString() + ".hl7"))
+                    sw.Write(message);
+            }
         }
         #endregion
 
