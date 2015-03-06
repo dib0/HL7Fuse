@@ -56,9 +56,16 @@
     <Compile Include="Configuration\EndPointConfigurationHandler.cs" />
     <Compile Include="Configuration\RoutingRuleSet.cs" />
     <Compile Include="Configuration\RuleValidationMethod.cs" />
-    <Compile Include="V21\MessageFactory.cs" />
-    <Compile Include="V22\MessageFactory.cs" />
-    <Compile Include="V251\MessageFactory.cs" />
+    <Compile Include="MessageFactoryBaseFile.cs" />
+    <Compile Include="V21\MessageFactoryMLLP.cs" />
+    <Compile Include="V21\MessageFactoryFile.cs" />
+    <Compile Include="V22\MessageFactoryMLLP.cs" />
+    <Compile Include="V22\MessageFactoryFile.cs" />
+    <Compile Include="V231\MessageFactoryFile.cs" />
+    <Compile Include="V23\MessageFactoryFile.cs" />
+    <Compile Include="V24\MessageFactoryFile.cs" />
+    <Compile Include="V251\MessageFactoryFile.cs" />
+    <Compile Include="V251\MessageFactoryMLLP.cs" />
     <Compile Include="EndPoints\BaseEndPoint.cs" />
     <Compile Include="EndPoints\CustomEndPoint.cs" />
     <Compile Include="EndPoints\SSLClientEndPoint.cs" />
@@ -68,12 +75,13 @@
     <Compile Include="IEndPoint.cs" />
     <Compile Include="EndPoints\MLLPClientEndPoint.cs" />
     <Compile Include="ConnectionManager.cs" />
-    <Compile Include="MessageFactoryBase.cs" />
+    <Compile Include="MessageFactoryBaseMLLP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="V231\MessageFactory.cs" />
-    <Compile Include="V23\MessageFactory.cs" />
-    <Compile Include="V24\MessageFactory.cs" />
-    <Compile Include="V25\MessageFactory.cs" />
+    <Compile Include="V231\MessageFactoryMLLP.cs" />
+    <Compile Include="V23\MessageFactoryMLLP.cs" />
+    <Compile Include="V24\MessageFactoryMLLP.cs" />
+    <Compile Include="V25\MessageFactoryMLLP.cs" />
+    <Compile Include="V25\MessageFactoryFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj">

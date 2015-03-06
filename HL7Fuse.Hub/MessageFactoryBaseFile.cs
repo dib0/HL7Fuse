@@ -8,7 +8,7 @@ using HL7Fuse.Protocol;
 
 namespace HL7Fuse.Hub
 {
-    public class MessageFactoryBase : ICommand<MLLPSession, HL7RequestInfo>
+    public class MessageFactoryBaseFile : ICommand<FileSession, HL7RequestInfo>
     {
         #region Public properties
         public virtual string Name
@@ -18,7 +18,7 @@ namespace HL7Fuse.Hub
         #endregion
 
         #region Public methods
-        public void ExecuteCommand(MLLPSession session, HL7RequestInfo requestInfo)
+        public void ExecuteCommand(FileSession session, HL7RequestInfo requestInfo)
         {
             // Handle event
             ConnectionManager.Instance.SendMessage(requestInfo.Message);

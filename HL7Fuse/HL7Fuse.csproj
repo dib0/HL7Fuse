@@ -86,6 +86,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlCommand.cs" />
+    <Compile Include="FileSession.cs" />
+    <Compile Include="FileServer.cs" />
     <Compile Include="MainService.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -129,6 +131,9 @@
       <Project>{bf54e1c3-862c-495a-b243-38e629d408aa}</Project>
       <Name>HL7Fuse.Logging</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
