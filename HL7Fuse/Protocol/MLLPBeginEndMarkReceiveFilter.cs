@@ -39,7 +39,7 @@ namespace HL7Fuse.Protocol
             result = result.TrimEnd(new char[]{' ', '\r', '\n'});
 
             HL7RequestInfoParser parser = new HL7RequestInfoParser();
-            return parser.ParseRequestInfo(result, "MLLP");
+            return parser.ParseRequestInfo(result);
         }
     }
 }

@@ -38,13 +38,9 @@ namespace HL7Fuse
         protected override void HandleUnknownRequest(HL7RequestInfo requestInfo)
         {
             string msg = string.Empty;
-            requestInfo.WasUnknownRequest = true;
 
             if (!AcceptEventIfNotImplemented)
-            {
-                requestInfo.ErrorMessage = "Unknown request.";
-                msg = GetAck(requestInfo, requestInfo.ErrorMessage);
-            }
+                msg = GetAck(requestInfo, "Unknown request.");
             else
                 msg = GetAck(requestInfo);
 

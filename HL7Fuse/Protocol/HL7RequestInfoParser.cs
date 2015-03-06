@@ -36,11 +36,6 @@ namespace HL7Fuse.Protocol
         /// <returns></returns>
         public HL7RequestInfo ParseRequestInfo(string message)
         {
-            return ParseRequestInfo(message, string.Empty);
-        }
-
-        public HL7RequestInfo ParseRequestInfo(string message, string protocol)
-        {
             HL7RequestInfo result = new HL7RequestInfo();
             PipeParser parser = new PipeParser();
 
@@ -61,9 +56,6 @@ namespace HL7Fuse.Protocol
                 result.Key = "V" + hl7Message.Version.Replace(".", "") + "." + hl7Message.GetStructureName();
             else
                 result.Key = "V" + hl7Message.Version.Replace(".", "") + ".MessageFactory";
-
-            if (!string.IsNullOrEmpty(protocol))
-                result.Key += protocol;
 
             result.Message = hl7Message;
 

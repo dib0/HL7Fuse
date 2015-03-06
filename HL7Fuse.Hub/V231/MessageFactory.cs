@@ -9,12 +9,12 @@ namespace HL7Fuse.Hub.V231
     /// <summary>
     /// Message factory
     /// </summary>
-    public class MessageFactoryFile : MessageFactoryBaseFile
+    public class MessageFactory : MessageFactoryBase
     {
         #region Public properties
         public override string Name
         {
-            get { return "V231.MessageFactoryFile"; }
+            get { return "V231.MessageFactory"; }
         }
         #endregion
     }

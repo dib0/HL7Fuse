@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HL7Fuse.Hub.V24
+namespace HL7Fuse.Hub.V23
 {
     /// <summary>
     /// Message factory
     /// </summary>
-    public class MessageFactoryMLLP : MessageFactoryBaseMLLP
+    public class MessageFactory : MessageFactoryBase
     {
         #region Public properties
         public override string Name
         {
-            get { return "V24.MessageFactoryMLLP"; }
+            get { return "V23.MessageFactory"; }
         }
         #endregion
     }
