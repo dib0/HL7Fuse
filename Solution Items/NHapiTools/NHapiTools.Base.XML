@@ -274,6 +274,92 @@
             Rules
             </summary>
         </member>
+        <member name="T:NHapiTools.Base.CustomImplementation.V21.Messages.ACK">
+            <summary>
+            Represents a ACK message structure (see chapter ). This structure contains the
+                         following elements:
+                        <ol><li>0: MSH (Message header segment) </li><li>1: MSA (Message acknowledgement segment) </li><li>2: ERR (Error segment) optional </li></ol>
+            </summary>
+        </member>
+        <member name="M:NHapiTools.Base.CustomImplementation.V21.Messages.ACK.#ctor(NHapi.Base.Parser.IModelClassFactory)">
+            <summary>
+            Creates a new ACK Group with custom IModelClassFactory.
+            
+            </summary>
+        </member>
+        <member name="M:NHapiTools.Base.CustomImplementation.V21.Messages.ACK.#ctor">
+            <summary>
+            Creates a new ACK Group with DefaultModelClassFactory.
+            
+            </summary>
+        </member>
+        <member name="M:NHapiTools.Base.CustomImplementation.V21.Messages.ACK.init(NHapi.Base.Parser.IModelClassFactory)">
+            <summary>
+            initalize method for ACK.  This does the segment setup for the message.
+            
+            </summary>
+        </member>
+        <member name="P:NHapiTools.Base.CustomImplementation.V21.Messages.ACK.MSH">
+            <summary>
+            Returns MSH (Message header segment) - creates it if necessary
+            
+            </summary>
+        </member>
+        <member name="P:NHapiTools.Base.CustomImplementation.V21.Messages.ACK.MSA">
+            <summary>
+            Returns MSA (Message acknowledgement segment) - creates it if necessary
+            
+            </summary>
+        </member>
+        <member name="P:NHapiTools.Base.CustomImplementation.V21.Messages.ACK.ERR">
+            <summary>
+            Returns ERR (Error segment) - creates it if necessary
+            
+            </summary>
+        </member>
+        <member name="T:NHapiTools.Base.CustomImplementation.V22.Messages.ACK">
+            <summary>
+            Represents a ACK message structure (see chapter ). This structure contains the
+                         following elements:
+                        <ol><li>0: MSH (Message header segment) </li><li>1: MSA (Message acknowledgement segment) </li><li>2: ERR (Error segment) optional </li></ol>
+            </summary>
+        </member>
+        <member name="M:NHapiTools.Base.CustomImplementation.V22.Messages.ACK.#ctor(NHapi.Base.Parser.IModelClassFactory)">
+            <summary>
+            Creates a new ACK Group with custom IModelClassFactory.
+            
+            </summary>
+        </member>
+        <member name="M:NHapiTools.Base.CustomImplementation.V22.Messages.ACK.#ctor">
+            <summary>
+            Creates a new ACK Group with DefaultModelClassFactory.
+            
+            </summary>
+        </member>
+        <member name="M:NHapiTools.Base.CustomImplementation.V22.Messages.ACK.init(NHapi.Base.Parser.IModelClassFactory)">
+            <summary>
+            initalize method for ACK.  This does the segment setup for the message.
+            
+            </summary>
+        </member>
+        <member name="P:NHapiTools.Base.CustomImplementation.V22.Messages.ACK.MSH">
+            <summary>
+            Returns MSH (Message header segment) - creates it if necessary
+            
+            </summary>
+        </member>
+        <member name="P:NHapiTools.Base.CustomImplementation.V22.Messages.ACK.MSA">
+            <summary>
+            Returns MSA (Message acknowledgement segment) - creates it if necessary
+            
+            </summary>
+        </member>
+        <member name="P:NHapiTools.Base.CustomImplementation.V22.Messages.ACK.ERR">
+            <summary>
+            Returns ERR (Error segment) - creates it if necessary
+            
+            </summary>
+        </member>
         <member name="T:NHapiTools.Base.Extensions">
             <summary>
             Provides multiple extension methods on the NHapi Base classes.

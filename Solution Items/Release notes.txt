@@ -19,9 +19,12 @@ Features:
 HL7Fuse is using the following projects:
 - SuperSocket 1.6
 - NHapi 2.4
-- NHapiTools 1.4
+- NHapiTools 1.5
 
 4. Changelog
+- V1.2.0.0
+	Upgraded NHapiTools to 1.5. Added FileServer for importing files instead of only receiving the messages through a TCP client.
+
 - V1.1.0.2
 	Fixed bug rule matching algorithm. The new method also matches messages parsed as generic messages.
 
