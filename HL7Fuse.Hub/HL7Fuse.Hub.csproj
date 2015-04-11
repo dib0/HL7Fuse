@@ -32,14 +32,14 @@
   <ItemGroup>
     <Reference Include="NHapi.Base, Version=2.4.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\NHapi\NHapi.Base.dll</HintPath>
+      <HintPath>..\packages\nHapi.2.4\lib\NHapi.Base.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Base, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="NHapiTools.Base, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\NHapiTools\NHapiTools.Base.dll</HintPath>
+      <HintPath>..\packages\NHapiTools.1.5.0.0\lib\NHapiTools.Base.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.SocketBase">
-      <HintPath>..\Solution Items\SuperSocket\SuperSocket.SocketBase.dll</HintPath>
+      <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -92,6 +92,9 @@
       <Project>{ef3429ec-c72e-410d-ae22-e534851f3ffc}</Project>
       <Name>HL7Fuse</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

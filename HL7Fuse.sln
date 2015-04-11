@@ -3,101 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Fuse", "HL7Fuse\HL7Fuse.csproj", "{EF3429EC-C72E-410D-AE22-E534851F3FFC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C08014EC-78D7-4BC4-8240-C9FF8476F099}"
-	ProjectSection(SolutionItems) = preProject
-		Solution Items\Release notes.txt = Solution Items\Release notes.txt
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SuperSocket", "SuperSocket", "{1281D77E-7FB3-43AC-9729-704106784EE7}"
-	ProjectSection(SolutionItems) = preProject
-		Solution Items\SuperSocket\log4net.dll = Solution Items\SuperSocket\log4net.dll
-		Solution Items\SuperSocket\Microsoft.Scripting.dll = Solution Items\SuperSocket\Microsoft.Scripting.dll
-		Solution Items\SuperSocket\Microsoft.Scripting.xml = Solution Items\SuperSocket\Microsoft.Scripting.xml
-		Solution Items\SuperSocket\Newtonsoft.Json.dll = Solution Items\SuperSocket\Newtonsoft.Json.dll
-		Solution Items\SuperSocket\Newtonsoft.Json.xml = Solution Items\SuperSocket\Newtonsoft.Json.xml
-		Solution Items\SuperSocket\SuperSocket.Agent.exe = Solution Items\SuperSocket\SuperSocket.Agent.exe
-		Solution Items\SuperSocket\SuperSocket.Agent.pdb = Solution Items\SuperSocket\SuperSocket.Agent.pdb
-		Solution Items\SuperSocket\supersocket.cmd = Solution Items\SuperSocket\supersocket.cmd
-		Solution Items\SuperSocket\SuperSocket.Common.dll = Solution Items\SuperSocket\SuperSocket.Common.dll
-		Solution Items\SuperSocket\SuperSocket.Common.pdb = Solution Items\SuperSocket\SuperSocket.Common.pdb
-		Solution Items\SuperSocket\SuperSocket.Common.XML = Solution Items\SuperSocket\SuperSocket.Common.XML
-		Solution Items\SuperSocket\SuperSocket.Dlr.dll = Solution Items\SuperSocket\SuperSocket.Dlr.dll
-		Solution Items\SuperSocket\SuperSocket.Dlr.pdb = Solution Items\SuperSocket\SuperSocket.Dlr.pdb
-		Solution Items\SuperSocket\SuperSocket.Dlr.XML = Solution Items\SuperSocket\SuperSocket.Dlr.XML
-		Solution Items\SuperSocket\SuperSocket.Facility.dll = Solution Items\SuperSocket\SuperSocket.Facility.dll
-		Solution Items\SuperSocket\SuperSocket.Facility.pdb = Solution Items\SuperSocket\SuperSocket.Facility.pdb
-		Solution Items\SuperSocket\SuperSocket.Facility.XML = Solution Items\SuperSocket\SuperSocket.Facility.XML
-		Solution Items\SuperSocket\SuperSocket.ServerManager.dll = Solution Items\SuperSocket\SuperSocket.ServerManager.dll
-		Solution Items\SuperSocket\SuperSocket.ServerManager.pdb = Solution Items\SuperSocket\SuperSocket.ServerManager.pdb
-		Solution Items\SuperSocket\supersocket.sh = Solution Items\SuperSocket\supersocket.sh
-		Solution Items\SuperSocket\SuperSocket.SocketBase.dll = Solution Items\SuperSocket\SuperSocket.SocketBase.dll
-		Solution Items\SuperSocket\SuperSocket.SocketBase.pdb = Solution Items\SuperSocket\SuperSocket.SocketBase.pdb
-		Solution Items\SuperSocket\SuperSocket.SocketBase.XML = Solution Items\SuperSocket\SuperSocket.SocketBase.XML
-		Solution Items\SuperSocket\SuperSocket.SocketEngine.dll = Solution Items\SuperSocket\SuperSocket.SocketEngine.dll
-		Solution Items\SuperSocket\SuperSocket.SocketEngine.pdb = Solution Items\SuperSocket\SuperSocket.SocketEngine.pdb
-		Solution Items\SuperSocket\SuperSocket.SocketEngine.XML = Solution Items\SuperSocket\SuperSocket.SocketEngine.XML
-		Solution Items\SuperSocket\SuperSocket.SocketService.pdb = Solution Items\SuperSocket\SuperSocket.SocketService.pdb
-		Solution Items\SuperSocket\SuperSocket.WebSocket.dll = Solution Items\SuperSocket\SuperSocket.WebSocket.dll
-		Solution Items\SuperSocket\SuperSocket.WebSocket.pdb = Solution Items\SuperSocket\SuperSocket.WebSocket.pdb
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapi", "NHapi", "{B703F169-2131-4B5F-982D-896B6FEB1F71}"
-	ProjectSection(SolutionItems) = preProject
-		Solution Items\NHapi\NHapi.Base.dll = Solution Items\NHapi\NHapi.Base.dll
-		Solution Items\NHapi\NHapi.Base.pdb = Solution Items\NHapi\NHapi.Base.pdb
-		Solution Items\NHapi\NHapi.Base.xml = Solution Items\NHapi\NHapi.Base.xml
-		Solution Items\NHapi\NHapi.Model.V21.dll = Solution Items\NHapi\NHapi.Model.V21.dll
-		Solution Items\NHapi\NHapi.Model.V21.pdb = Solution Items\NHapi\NHapi.Model.V21.pdb
-		Solution Items\NHapi\NHapi.Model.V22.dll = Solution Items\NHapi\NHapi.Model.V22.dll
-		Solution Items\NHapi\NHapi.Model.V22.pdb = Solution Items\NHapi\NHapi.Model.V22.pdb
-		Solution Items\NHapi\NHapi.Model.V23.dll = Solution Items\NHapi\NHapi.Model.V23.dll
-		Solution Items\NHapi\NHapi.Model.V23.pdb = Solution Items\NHapi\NHapi.Model.V23.pdb
-		Solution Items\NHapi\NHapi.Model.V23.xml = Solution Items\NHapi\NHapi.Model.V23.xml
-		Solution Items\NHapi\NHapi.Model.V231.dll = Solution Items\NHapi\NHapi.Model.V231.dll
-		Solution Items\NHapi\NHapi.Model.V231.pdb = Solution Items\NHapi\NHapi.Model.V231.pdb
-		Solution Items\NHapi\NHapi.Model.V231.xml = Solution Items\NHapi\NHapi.Model.V231.xml
-		Solution Items\NHapi\NHapi.Model.V24.dll = Solution Items\NHapi\NHapi.Model.V24.dll
-		Solution Items\NHapi\NHapi.Model.V24.pdb = Solution Items\NHapi\NHapi.Model.V24.pdb
-		Solution Items\NHapi\NHapi.Model.V24.xml = Solution Items\NHapi\NHapi.Model.V24.xml
-		Solution Items\NHapi\NHapi.Model.V25.dll = Solution Items\NHapi\NHapi.Model.V25.dll
-		Solution Items\NHapi\NHapi.Model.V25.pdb = Solution Items\NHapi\NHapi.Model.V25.pdb
-		Solution Items\NHapi\NHapi.Model.V25.xml = Solution Items\NHapi\NHapi.Model.V25.xml
-		Solution Items\NHapi\NHapi.Model.V251.dll = Solution Items\NHapi\NHapi.Model.V251.dll
-		Solution Items\NHapi\NHapi.Model.V251.pdb = Solution Items\NHapi\NHapi.Model.V251.pdb
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHapiTools", "NHapiTools", "{0EDA1336-E5AB-4EF0-A605-7E03D59F1FBE}"
-	ProjectSection(SolutionItems) = preProject
-		Solution Items\NHapiTools\NHapiTools.Base.dll = Solution Items\NHapiTools\NHapiTools.Base.dll
-		Solution Items\NHapiTools\NHapiTools.Base.pdb = Solution Items\NHapiTools\NHapiTools.Base.pdb
-		Solution Items\NHapiTools\NHapiTools.Base.XML = Solution Items\NHapiTools\NHapiTools.Base.XML
-		Solution Items\NHapiTools\NHapiTools.Model.V21.dll = Solution Items\NHapiTools\NHapiTools.Model.V21.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V21.pdb = Solution Items\NHapiTools\NHapiTools.Model.V21.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V21.xml = Solution Items\NHapiTools\NHapiTools.Model.V21.xml
-		Solution Items\NHapiTools\NHapiTools.Model.V22.dll = Solution Items\NHapiTools\NHapiTools.Model.V22.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V22.pdb = Solution Items\NHapiTools\NHapiTools.Model.V22.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V22.xml = Solution Items\NHapiTools\NHapiTools.Model.V22.xml
-		Solution Items\NHapiTools\NHapiTools.Model.V23.dll = Solution Items\NHapiTools\NHapiTools.Model.V23.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V23.pdb = Solution Items\NHapiTools\NHapiTools.Model.V23.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V23.XML = Solution Items\NHapiTools\NHapiTools.Model.V23.XML
-		Solution Items\NHapiTools\NHapiTools.Model.V231.dll = Solution Items\NHapiTools\NHapiTools.Model.V231.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V231.pdb = Solution Items\NHapiTools\NHapiTools.Model.V231.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V231.XML = Solution Items\NHapiTools\NHapiTools.Model.V231.XML
-		Solution Items\NHapiTools\NHapiTools.Model.V24.dll = Solution Items\NHapiTools\NHapiTools.Model.V24.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V24.pdb = Solution Items\NHapiTools\NHapiTools.Model.V24.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V24.XML = Solution Items\NHapiTools\NHapiTools.Model.V24.XML
-		Solution Items\NHapiTools\NHapiTools.Model.V25.dll = Solution Items\NHapiTools\NHapiTools.Model.V25.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V25.pdb = Solution Items\NHapiTools\NHapiTools.Model.V25.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V25.XML = Solution Items\NHapiTools\NHapiTools.Model.V25.XML
-		Solution Items\NHapiTools\NHapiTools.Model.V251.dll = Solution Items\NHapiTools\NHapiTools.Model.V251.dll
-		Solution Items\NHapiTools\NHapiTools.Model.V251.pdb = Solution Items\NHapiTools\NHapiTools.Model.V251.pdb
-		Solution Items\NHapiTools\NHapiTools.Model.V251.xml = Solution Items\NHapiTools\NHapiTools.Model.V251.xml
-		Solution Items\NHapiTools\Release notes.txt = Solution Items\NHapiTools\Release notes.txt
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Fuse.Hub", "HL7Fuse.Hub\HL7Fuse.Hub.csproj", "{95D85467-0003-40FF-A10C-D731F54059B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Fuse.Logging", "HL7Fuse.Logging\HL7Fuse.Logging.csproj", "{BF54E1C3-862C-495A-B243-38E629D408AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA8F74BD-6B65-4AB2-8C2D-EC7B8078AACC}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\Release notes.txt = Solution Items\Release notes.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,10 +33,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{1281D77E-7FB3-43AC-9729-704106784EE7} = {C08014EC-78D7-4BC4-8240-C9FF8476F099}
-		{B703F169-2131-4B5F-982D-896B6FEB1F71} = {C08014EC-78D7-4BC4-8240-C9FF8476F099}
-		{0EDA1336-E5AB-4EF0-A605-7E03D59F1FBE} = {C08014EC-78D7-4BC4-8240-C9FF8476F099}
 	EndGlobalSection
 EndGlobal

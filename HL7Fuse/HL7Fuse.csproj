@@ -50,27 +50,32 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NHapi.Base">
-      <HintPath>..\Solution Items\NHapi\NHapi.Base.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="NHapiTools.Base">
-      <HintPath>..\Solution Items\NHapiTools\NHapiTools.Base.dll</HintPath>
+    <Reference Include="NHapi.Base, Version=2.4.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nHapi.2.4\lib\NHapi.Base.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SuperSocket.Common, Version=1.6.1.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\SuperSocket\SuperSocket.Common.dll</HintPath>
+    <Reference Include="NHapiTools.Base, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.1.5.0.0\lib\NHapiTools.Base.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SuperSocket.Facility, Version=1.6.1.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\SuperSocket\SuperSocket.Facility.dll</HintPath>
+    <Reference Include="SuperSocket.Common, Version=1.6.4.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SuperSocket.SocketBase, Version=1.6.1.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\SuperSocket\SuperSocket.SocketBase.dll</HintPath>
+    <Reference Include="SuperSocket.Facility, Version=1.6.4.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.Facility.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="SuperSocket.SocketEngine, Version=1.6.1.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Solution Items\SuperSocket\SuperSocket.SocketEngine.dll</HintPath>
+    <Reference Include="SuperSocket.SocketBase, Version=1.6.4.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SuperSocket.SocketEngine">
+      <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -108,6 +113,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="log4net.config" />
+    <None Include="log4net.unix.config" />
+    <None Include="packages.config" />
+    <None Include="supersocket.cmd" />
+    <None Include="supersocket.sh" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -132,17 +141,14 @@
       <Name>HL7Fuse.Logging</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)Solution Items\NHapi\*.*" $(TargetDir) /Y
-xcopy "$(SolutionDir)Solution Items\NHapiTools\*.*" $(TargetDir) /Y
-xcopy "$(SolutionDir)Solution Items\SuperSocket\*.*" $(TargetDir) /Y
+    <PostBuildEvent>xcopy "$(SolutionDir)packages\nHapi.2.4\lib\*.*" $(TargetDir) /Y
+xcopy "$(SolutionDir)packages\NHapiTools.1.5.0.0\lib\*.*" $(TargetDir) /Y
+xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\lib\net45\*.*" $(TargetDir) /Y
 md $(TargetDir)Config
 md $(TargetDir)Logs
-xcopy "$(SolutionDir)Solution Items\SuperSocket\Config\*.*" $(TargetDir)Config /Y</PostBuildEvent>
+xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\content\*.*" $(TargetDir)Config /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
