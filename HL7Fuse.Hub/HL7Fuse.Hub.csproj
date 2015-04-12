@@ -30,13 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NHapi.Base, Version=2.4.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\nHapi.2.4\lib\NHapi.Base.dll</HintPath>
+    <Reference Include="NHapi.Base">
+      <HintPath>..\packages\nHapi.2.4.0.10\lib\NHapi.Base.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Base, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NHapiTools.1.5.0.0\lib\NHapiTools.Base.dll</HintPath>
+    <Reference Include="NHapiTools.Base">
+      <HintPath>..\packages\NHapiTools.1.6.0.1\lib\NHapiTools.Base.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.SocketBase">
       <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketBase.dll</HintPath>
