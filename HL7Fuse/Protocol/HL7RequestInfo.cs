@@ -41,5 +41,16 @@ namespace HL7Fuse.Protocol
                 return (ErrorMessage != null);
             }
         }
+
+        /// <summary>
+        /// By default an (N)ACK message will be sent (unsollicited communication pattern).
+        /// If you, however, need to return some other message (like in a sollicited communication pattern
+        /// you can do this by filling the ResponseMessage with the response you want to send.
+        /// </summary>
+        public IMessage ResponseMessage
+        {
+            get;
+            set;
+        }
     }
 }

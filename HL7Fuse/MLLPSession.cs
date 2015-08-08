@@ -59,7 +59,14 @@ namespace HL7Fuse
         /// <param name="requestInfo"></param>
         public void Send(HL7RequestInfo requestInfo)
         {
-            string message = GetAck(requestInfo);
+            string message = string.Empty;
+            if (requestInfo.ResponseMessage != null)
+            {
+                PipeParser parser = new PipeParser();
+                message = parser.Encode(message);
+            }
+            else
+                message = GetAck(requestInfo);
 
             Send(message);
         }
