@@ -63,7 +63,7 @@ namespace HL7Fuse
             if (requestInfo.ResponseMessage != null)
             {
                 PipeParser parser = new PipeParser();
-                message = parser.Encode(message);
+                message = parser.Encode(requestInfo.ResponseMessage);
             }
             else
                 message = GetAck(requestInfo);
