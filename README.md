@@ -14,6 +14,6 @@ message hub, so you can receive one message and send this (using filters) to man
 - Integration: Provides MLLP/TCP (secure connection possible) start point
 - Integration: Provides SSL/HTTP/MLLP/File end points, and allows custom backend protocol implementations
 
-##Requirements
+**Requirements**
 
 Hl7Fuse currently targets version 4.5 of the .NET Framework.
