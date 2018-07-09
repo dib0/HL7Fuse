@@ -22,6 +22,8 @@ HL7Fuse is using the following projects:
 - NHapiTools 1.5
 
 4. Changelog
+- V1.2.0.1
+	Change target .Net Framework to 4.6.
 - V1.2.0.0
 	Upgraded NHapiTools to 1.5. Added FileServer for importing files instead of only receiving the messages through a TCP client.
 
