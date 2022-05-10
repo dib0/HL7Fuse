@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HL7Fuse</RootNamespace>
     <AssemblyName>HL7Fuse</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -51,113 +51,129 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Solution Items\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Base, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Base.dll</HintPath>
+    <Reference Include="NHapi.Base, Version=3.1.1.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Base.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V21, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V21.dll</HintPath>
+    <Reference Include="NHapi.Model.V21, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V21.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V22, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V22.dll</HintPath>
+    <Reference Include="NHapi.Model.V22, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V22.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V23, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V23.dll</HintPath>
+    <Reference Include="NHapi.Model.V23, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V23.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V231, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V231.dll</HintPath>
+    <Reference Include="NHapi.Model.V231, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V231.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V24, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V24.dll</HintPath>
+    <Reference Include="NHapi.Model.V24, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V24.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V25, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V25.dll</HintPath>
+    <Reference Include="NHapi.Model.V25, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V25.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V251, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V251.dll</HintPath>
+    <Reference Include="NHapi.Model.V251, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V251.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V26, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V26.dll</HintPath>
+    <Reference Include="NHapi.Model.V26, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V26.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V27, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V27.dll</HintPath>
+    <Reference Include="NHapi.Model.V27, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V27.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V271, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V271.dll</HintPath>
+    <Reference Include="NHapi.Model.V271, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V271.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V28, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V28.dll</HintPath>
+    <Reference Include="NHapi.Model.V28, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V28.dll</HintPath>
     </Reference>
-    <Reference Include="NHapi.Model.V281, Version=2.5.0.6, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\nHapi.2.5.0.6\lib\NHapi.Model.V281.dll</HintPath>
+    <Reference Include="NHapi.Model.V281, Version=3.1.0.0, Culture=neutral, PublicKeyToken=d0d8ea960a3440eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\nhapi.3.1.1\lib\net35\NHapi.Model.V281.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Base, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Base.dll</HintPath>
+    <Reference Include="NHapiTools.Base, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Base.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V21, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V21.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V21, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V21.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V22, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V22.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V22, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V22.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V23, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V23.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V23, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V23.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V231, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V231.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V231, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V231.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V24, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V24.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V24, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V24.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V25, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V25.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V25, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V25.dll</HintPath>
     </Reference>
-    <Reference Include="NHapiTools.Model.V251, Version=1.10.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V251.dll</HintPath>
+    <Reference Include="NHapiTools.Model.V251, Version=2.0.3.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V251.dll</HintPath>
     </Reference>
     <Reference Include="NHapiTools.Model.V26, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V26.dll</HintPath>
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V26.dll</HintPath>
     </Reference>
     <Reference Include="NHapiTools.Model.V27, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V27.dll</HintPath>
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V27.dll</HintPath>
     </Reference>
     <Reference Include="NHapiTools.Model.V271, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V271.dll</HintPath>
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V271.dll</HintPath>
     </Reference>
     <Reference Include="NHapiTools.Model.V28, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V28.dll</HintPath>
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V28.dll</HintPath>
     </Reference>
     <Reference Include="NHapiTools.Model.V281, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8cc2ca07deb72b3d, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHapiTools.1.10.0.0\lib\NHapiTools.Model.V281.dll</HintPath>
+      <HintPath>..\packages\NHapiTools.2.0.3\lib\net461\NHapiTools.Model.V281.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.Common, Version=1.6.4.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
       <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.Common.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="SuperSocket.Facility, Version=1.6.4.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
       <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.Facility.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="SuperSocket.SocketBase, Version=1.6.4.0, Culture=neutral, PublicKeyToken=6c80000676988ebb, processorArchitecture=MSIL">
       <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketBase.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="SuperSocket.SocketEngine">
       <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlCommand.cs" />
