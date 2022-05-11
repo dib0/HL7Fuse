@@ -11,7 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Fuse.Logging", "HL7Fuse.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA8F74BD-6B65-4AB2-8C2D-EC7B8078AACC}"
 	ProjectSection(SolutionItems) = preProject
-		Solution Items\log4net.dll = Solution Items\log4net.dll
 		Solution Items\Release notes.txt = Solution Items\Release notes.txt
 	EndProjectSection
 EndProject
