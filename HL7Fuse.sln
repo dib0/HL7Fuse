@@ -18,6 +18,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7FuseWorkerRole", "HL7Fus
 EndProject
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "HL7AzureCloudService", "AzureCluodService\HL7AzureCloudService.ccproj", "{1FA497DB-6E42-45C6-9954-9164C0AA4C12}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{7E498136-3F53-48BE-9F95-33EA0C28BB57}"
+	ProjectSection(SolutionItems) = preProject
+		Config\log4net.config = Config\log4net.config
+		Config\log4net.unix.config = Config\log4net.unix.config
+		Config\supersocket.cmd = Config\supersocket.cmd
+		Config\supersocket.sh = Config\supersocket.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

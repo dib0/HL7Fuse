@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SuperSocket.SocketBase">
-      <HintPath>..\packages\SuperSocket.1.6.4\lib\net45\SuperSocket.SocketBase.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -95,6 +92,9 @@
     </PackageReference>
     <PackageReference Include="NHapiTools">
       <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="SuperSocket.SocketBase">
+      <Version>1.6.7</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
