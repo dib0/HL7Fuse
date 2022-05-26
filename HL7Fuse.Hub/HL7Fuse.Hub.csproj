@@ -25,5 +25,8 @@
   </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>echo xcopy "$(TargetPath)" "$(SolutionDir)HL7Fuse\bin\$(Configuration)\net461" /Y</PostBuildEvent>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>$(AssemblyName)</PackageId>
+    <Version>$(VersionPrefix)1.2.1.0</Version>
   </PropertyGroup>
 </Project>

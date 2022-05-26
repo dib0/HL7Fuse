@@ -83,6 +83,8 @@ echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\lib\net45\*.*" $(TargetDir)
 echo md $(TargetDir)Config
 echo md $(TargetDir)Logs
 echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\content\*.*" $(TargetDir)Config /Y</PostBuildEvent>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>$(VersionPrefix)1.2.1.0</Version>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="appsettings.Development.json" />
