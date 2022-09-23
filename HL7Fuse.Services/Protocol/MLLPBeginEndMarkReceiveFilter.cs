@@ -7,7 +7,7 @@ using NHapiTools.Base.Util;
 using SuperSocket.Facility.Protocol;
 using SuperSocket.SocketBase.Protocol;
 
-namespace HL7Fuse.Protocol
+namespace HL7Fuse.Services.Protocol
 {
     public class MLLPBeginEndMarkReceiveFilter : BeginEndMarkReceiveFilter<HL7RequestInfo>
     {

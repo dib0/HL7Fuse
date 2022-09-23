@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFrameworks>net6.0;net461</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj" />
-    <ProjectReference Include="..\HL7Fuse\HL7Fuse.csproj" />
+    <ProjectReference Include="..\HL7Fuse.Services\HL7Fuse.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="nhapi">
@@ -27,6 +27,6 @@
     <PostBuildEvent>echo xcopy "$(TargetPath)" "$(SolutionDir)HL7Fuse\bin\$(Configuration)\net461" /Y</PostBuildEvent>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>$(AssemblyName)</PackageId>
-    <Version>$(VersionPrefix)1.2.1.0</Version>
+    <Version>$(VersionPrefix)1.2.2.0</Version>
   </PropertyGroup>
 </Project>

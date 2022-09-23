@@ -6,9 +6,9 @@
 using SuperSocket.SocketBase;
 using System;
 
-namespace HL7Fuse
+namespace HL7Fuse.Services
 {
-    internal class ControlCommand
+    public class ControlCommand
     {
         public string Name { get; set; }
 

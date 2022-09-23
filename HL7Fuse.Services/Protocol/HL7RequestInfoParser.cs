@@ -10,7 +10,7 @@ using NHapiTools.Base.Validation;
 using NHapi.Base.Model;
 using System.Configuration;
 
-namespace HL7Fuse.Protocol
+namespace HL7Fuse.Services.Protocol
 {
     public class HL7RequestInfoParser : IRequestInfoParser<HL7RequestInfo>
     {

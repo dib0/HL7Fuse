@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
 using SuperSocket.SocketBase.Protocol;
-using HL7Fuse.Protocol;
+using HL7Fuse.Services.Protocol;
 using System.Threading;
 using System.IO;
 
-namespace HL7Fuse
+namespace HL7Fuse.Services
 {
     public class FileServer : AppServer<FileSession, HL7RequestInfo>
     {

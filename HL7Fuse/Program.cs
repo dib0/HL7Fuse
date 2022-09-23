@@ -17,6 +17,7 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Ipc;
 using System.ServiceProcess;
+using HL7Fuse.Services;
 
 namespace HL7Fuse
 {

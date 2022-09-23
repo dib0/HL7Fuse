@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
-using HL7Fuse.Protocol;
+using HL7Fuse.Services.Protocol;
 using NHapi.Base;
 using NHapi.Base.Model;
 using NHapi.Base.Parser;
@@ -12,7 +12,7 @@ using NHapiTools.Base.Util;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Protocol;
 
-namespace HL7Fuse
+namespace HL7Fuse.Services
 {
     public class MLLPSession : AppSession<MLLPSession, HL7RequestInfo>
     {

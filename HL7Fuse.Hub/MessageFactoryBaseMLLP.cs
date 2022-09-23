@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SuperSocket.SocketBase.Command;
-using HL7Fuse.Protocol;
+using HL7Fuse.Services.Protocol;
+using HL7Fuse.Services;
 
 namespace HL7Fuse.Hub
 {

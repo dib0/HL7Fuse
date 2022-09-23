@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SuperSocket.SocketBase.Protocol;
 using NHapi.Base.Model;
 
-namespace HL7Fuse.Protocol
+namespace HL7Fuse.Services.Protocol
 {
     public class HL7RequestInfo : IRequestInfo
     {

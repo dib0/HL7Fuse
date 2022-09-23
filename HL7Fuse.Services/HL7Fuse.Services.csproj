@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461</TargetFrameworks>
-    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net6.0;net461</TargetFrameworks>
+    <OutputType>Library</OutputType>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -36,11 +36,6 @@
 		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
 	</ItemGroup>
   <ItemGroup>
-    <Compile Update="MainService.cs">
-      <SubType>Component</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
@@ -59,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj" />
-    <ProjectReference Include="..\HL7Fuse.Services\HL7Fuse.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.14" />
@@ -78,17 +72,7 @@
     </PackageReference>
   </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>echo xcopy "$(SolutionDir)packages\nhapi.3.1.1\lib\netstandard2.0\*.*" $(TargetDir) /Y
-echo xcopy "$(SolutionDir)packages\NHapiTools.2.0.3\lib\net461\*.*" $(TargetDir) /Y
-echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\lib\net45\*.*" $(TargetDir) /Y
-echo md $(TargetDir)Config
-echo md $(TargetDir)Logs
-echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\content\*.*" $(TargetDir)Config /Y</PostBuildEvent>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>$(VersionPrefix)1.2.2.0</Version>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="appsettings.Development.json" />
-    <Content Include="appsettings.json" />
-  </ItemGroup>
 </Project>

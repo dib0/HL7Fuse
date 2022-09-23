@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
 using SuperSocket.SocketBase.Protocol;
-using HL7Fuse.Protocol;
+using HL7Fuse.Services.Protocol;
 
-namespace HL7Fuse
+namespace HL7Fuse.Services
 {
     public class MLLPServer : AppServer<MLLPSession, HL7RequestInfo>
     {
