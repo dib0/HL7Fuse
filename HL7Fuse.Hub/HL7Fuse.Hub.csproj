@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461;net6.0</TargetFrameworks>
+    <TargetFrameworks>net48;net6.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
@@ -24,9 +24,9 @@
     </PackageReference>
   </ItemGroup>
   <PropertyGroup>
-    <PostBuildEvent>echo xcopy "$(TargetPath)" "$(SolutionDir)HL7Fuse\bin\$(Configuration)\net461" /Y</PostBuildEvent>
+    <PostBuildEvent>echo xcopy "$(TargetPath)" "$(SolutionDir)HL7Fuse\bin\$(Configuration)\net48" /Y</PostBuildEvent>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>$(AssemblyName)</PackageId>
-    <Version>$(VersionPrefix)1.2.2.0</Version>
+    <Version>$(VersionPrefix)1.2.3.0</Version>
   </PropertyGroup>
 </Project>

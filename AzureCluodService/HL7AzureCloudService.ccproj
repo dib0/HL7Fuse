@@ -12,6 +12,7 @@
     <AssemblyName>AzureCluodService</AssemblyName>
     <StartDevelopmentStorage>True</StartDevelopmentStorage>
     <Name>HL7AzureCloudService</Name>
+	<DotNetFrameworkVersion>v4.8</DotNetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
