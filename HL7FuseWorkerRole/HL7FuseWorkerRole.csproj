@@ -34,7 +34,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.48.1" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.49.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.8" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
