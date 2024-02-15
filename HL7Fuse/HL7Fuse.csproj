@@ -18,15 +18,15 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-		<AssemblyFileVersion>1.2.5.0</AssemblyFileVersion>
+		<AssemblyFileVersion>1.2.6.0</AssemblyFileVersion>
 		<FileVersion>$(AssemblyFileVersion)</FileVersion>
 		<AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
 		<AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
 		<Version>$(AssemblyFileVersion)</Version>
     <AssemblyTitle>HL7Fuse</AssemblyTitle>
-    <AssemblyDescription/>
-    <AssemblyConfiguration/>
-    <AssemblyCompany/>
+    <AssemblyDescription />
+    <AssemblyConfiguration />
+    <AssemblyCompany />
     <AssemblyProduct>HL7Fuse</AssemblyProduct>
     <AssemblyCopyright>Copyright © 2024</AssemblyCopyright>
     <ProjectGuid>4e4525b0-795c-4334-9c31-5c38a7e6acb1</ProjectGuid>
@@ -64,7 +64,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.2" />
     <PackageReference Include="nhapi" Version="3.2.2" />
     <PackageReference Include="NHapiTools" Version="2.0.4" />
     <PackageReference Include="SuperSocket.Facility" Version="1.6.8" />

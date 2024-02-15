@@ -6,7 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <AssemblyFileVersion>1.2.5.0</AssemblyFileVersion>
+    <AssemblyFileVersion>1.2.6.0</AssemblyFileVersion>
     <FileVersion>$(AssemblyFileVersion)</FileVersion>
     <AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
     <AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
@@ -36,7 +36,7 @@
     <ProjectReference Include="..\HL7Fuse\HL7Fuse.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.5.0" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
     <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="Microsoft.Data.Services.Client" Version="5.8.5" />
@@ -55,7 +55,7 @@
     <PackageReference Include="System.IO.Hashing" Version="8.0.0" />
     <PackageReference Include="System.Memory.Data" Version="8.0.0" />
     <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.2" />
-    <PackageReference Include="System.Text.Json" Version="8.0.1" />
+    <PackageReference Include="System.Text.Json" Version="8.0.2" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
