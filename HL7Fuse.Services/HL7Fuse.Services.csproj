@@ -18,7 +18,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <AssemblyFileVersion>1.2.6.0</AssemblyFileVersion>
+    <AssemblyFileVersion>1.2.7.0</AssemblyFileVersion>
     <FileVersion>$(AssemblyFileVersion)</FileVersion>
     <AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
     <AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
@@ -64,7 +64,7 @@
     <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="log4net" Version="2.0.17" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />

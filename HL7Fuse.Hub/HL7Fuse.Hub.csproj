@@ -3,7 +3,7 @@
     <TargetFrameworks>net48;net8.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <AssemblyFileVersion>1.2.6.0</AssemblyFileVersion>
+    <AssemblyFileVersion>1.2.7.0</AssemblyFileVersion>
     <FileVersion>$(AssemblyFileVersion)</FileVersion>
     <AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
     <AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
