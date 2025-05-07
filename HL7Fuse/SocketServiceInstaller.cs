@@ -2,7 +2,7 @@
 // Assembly: SuperSocket.SocketService, Version=1.6.1.0, Culture=neutral, PublicKeyToken=6c80000676988ebb
 // MVID: 9C172A0A-F91F-4CC9-B921-9FE0407DCF07
 // Assembly location: C:\Source\HL7Fuse\Solution Items\SuperSocket\SuperSocket.SocketService.exe
-
+#if NET48
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -58,3 +58,4 @@ namespace HL7Fuse
         }
     }
 }
+#endif

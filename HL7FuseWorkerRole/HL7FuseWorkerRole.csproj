@@ -6,7 +6,7 @@
     <UseWindowsForms>false</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <AssemblyFileVersion>1.2.8.0</AssemblyFileVersion>
+    <AssemblyFileVersion>1.2.10.0</AssemblyFileVersion>
     <FileVersion>$(AssemblyFileVersion)</FileVersion>
     <AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
     <AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
@@ -39,14 +39,13 @@
     <PackageReference Include="Microsoft.Data.Services.Client" Version="5.8.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Identity.Client" Version="4.64.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.8" />
+    <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.7" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="8.0.1" />
     <PackageReference Include="System.IO.Hashing" Version="8.0.0" />

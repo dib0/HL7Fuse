@@ -4,7 +4,7 @@
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <AssemblyFileVersion>1.2.7.0</AssemblyFileVersion>
+    <AssemblyFileVersion>1.2.10.0</AssemblyFileVersion>
     <FileVersion>$(AssemblyFileVersion)</FileVersion>
     <AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
     <AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
@@ -23,7 +23,8 @@
     </AssemblyAttribute>-->
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SuperSocket.SocketBase" Version="1.6.8" />
+    <PackageReference Include="SuperSocket.SocketBase" Version="1.6.7" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
       <PrivateAssets>all</PrivateAssets>

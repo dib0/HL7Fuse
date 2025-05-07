@@ -18,7 +18,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-		<AssemblyFileVersion>1.2.8.0</AssemblyFileVersion>
+		<AssemblyFileVersion>1.2.10.0</AssemblyFileVersion>
 		<FileVersion>$(AssemblyFileVersion)</FileVersion>
 		<AssemblyVersion>$(AssemblyFileVersion)</AssemblyVersion>
 		<AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
@@ -30,21 +30,32 @@
     <AssemblyProduct>HL7Fuse</AssemblyProduct>
     <AssemblyCopyright>Copyright © 2024</AssemblyCopyright>
     <ProjectGuid>4e4525b0-795c-4334-9c31-5c38a7e6acb1</ProjectGuid>
+    <!--Aggiunto il 20250507-->
+    <!--<Nullable>enable</Nullable>-->
+    <!--<ImplicitUsings>true</ImplicitUsings>-->
+    <RootNamespace>Hl7Fuse</RootNamespace>
+    <!--Aggiunto il 20250507-->
   </PropertyGroup>
-  <PropertyGroup />
+  <PropertyGroup>
+    <NetFrameworks>|net48|</NetFrameworks>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Runtime.Remoting" />
-    <Reference Include="System.Security" />
-    <Reference Include="System.ServiceProcess" />
-    <Reference Include="System.Transactions" />
+    <Reference Condition="$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="System.Configuration.Install" />
+    <Reference Condition="$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="System.Net" />
+    <Reference Condition="$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="System.Runtime.Remoting" />
+    <Reference Condition="$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="System.Security" />
+    <Reference Condition="$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="System.ServiceProcess" />
+    <Reference Condition="$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="System.Transactions" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
-	</ItemGroup>
+		<PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.1" />
+    <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Configuration.Xml" Version="8.0.1" />
+    <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Update="MainService.cs">
       <SubType>Component</SubType>
@@ -52,26 +63,15 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.17" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
     <PackageReference Include="nhapi" Version="3.2.2" />
     <PackageReference Include="NHapiTools" Version="2.0.4" />
-    <PackageReference Include="SuperSocket.Facility" Version="1.6.8" />
-    <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.8" />
+    <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.7" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
   </ItemGroup>
+  <!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="MD $(ProjectDir)$(OutDir)Config" />
+  </Target>-->
   <PropertyGroup>
-    <PostBuildEvent>echo xcopy "$(SolutionDir)packages\nhapi.3.2.2\lib\netstandard2.0\*.*" $(TargetDir) /Y
-echo xcopy "$(SolutionDir)packages\NHapiTools.2.0.4\lib\net461\*.*" $(TargetDir) /Y
-echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\lib\net45\*.*" $(TargetDir) /Y
-echo md $(TargetDir)Config
-echo md $(TargetDir)Logs
-echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\content\*.*" $(TargetDir)Config /Y</PostBuildEvent>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
@@ -81,5 +81,22 @@ echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\content\*.*" $(TargetDir)Co
   <ItemGroup>
     <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj" />
     <ProjectReference Include="..\HL7Fuse.Services\HL7Fuse.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Config\log4net.config" Link="Config\log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Config\log4net.unix.config" Link="Config\log4net.unix.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Config\supersocket.cmd" Link="Config\supersocket.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Config\supersocket.sh" Link="Config\supersocket.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

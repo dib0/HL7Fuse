@@ -13,11 +13,23 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+#if NET48
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Ipc;
+#endif
 using System.ServiceProcess;
 using HL7Fuse.Services;
+using System.Diagnostics;
+using HL7Fuse.Logging;
+#if NET8_0_OR_GREATER
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Hl7Fuse;
+using System.ComponentModel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+#endif
+
 
 namespace HL7Fuse
 {
@@ -32,11 +44,39 @@ namespace HL7Fuse
 
         private static void Main(string[] args)
         {
+            //Assembly ass0 = System.Reflection.Assembly.Load(@"D:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7\bin\Debug\net8.0\InITeC.Mdl.Integration.HL7.dll");
+            //Assembly ass1 = System.Reflection.Assembly.Load(@"D:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7\bin\Debug\net48\InITeC.Mdl.Integration.HL7.dll");
+            Console.WriteLine("Please press a key to start...");
+            System.String exeArgTest = Console.ReadKey().KeyChar.ToString();
+            //String serviceName = ConfigurationManager.AppSettings["ServiceName"];
             if (Platform.IsMono && (int)Path.DirectorySeparatorChar == 47)
                 Program.ChangeScriptExecutable();
             if (!Platform.IsMono && !Environment.UserInteractive || Platform.IsMono && !AppDomain.CurrentDomain.FriendlyName.Equals(Path.GetFileName(Assembly.GetEntryAssembly().CodeBase)))
             {
-                Program.RunAsService();
+                try
+                {
+                    Logger.Info("HL7Fuse-Starting");
+#if NET48
+
+                    ServiceBase.Run(new ServiceBase[1] { (ServiceBase)new MainService() });
+#else
+                    HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+                    Logger.Info("HL7Fuse-CreateWebHostBuilder: done");
+                    builder.Services.AddWindowsService(options =>
+                    {
+                        options.ServiceName = ConfigurationManager.AppSettings["ServiceName"];
+                    });
+                    IHost host = builder.Build();
+                    builder.Services.AddHostedService<HL7BackgroundService>();
+                    host.Run();
+                    Logger.Info("InITeC.Mdl.Synk-End");
+#endif
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error($"Sever error {ex.Message}");
+                    throw;
+                }
             }
             else
             {
@@ -46,8 +86,10 @@ namespace HL7Fuse
                     Console.WriteLine("Welcome to HL7Fuse!");
                     Console.WriteLine("Please press a key to continue...");
                     Console.WriteLine("-[r]: Run this application as a console application;");
+#if NET48
                     Console.WriteLine("-[i]: Install this application as a Windows Service;");
                     Console.WriteLine("-[u]: Uninstall this Windows Service application;");
+#endif
                     string exeArg;
                     do
                     {
@@ -87,18 +129,22 @@ namespace HL7Fuse
         {
             switch (exeArg.ToLower())
             {
+#if NET48
                 case "i":
                     SelfInstaller.InstallMe();
                     return true;
                 case "u":
                     SelfInstaller.UninstallMe();
                     return true;
+#endif
                 case "r":
                     Program.RunAsConsole();
                     return true;
+#if NET48
                 case "c":
                     Program.RunAsController(startArgs);
                     return true;
+#endif
                 default:
                     Console.WriteLine("Invalid argument!");
                     return false;
@@ -205,7 +251,7 @@ namespace HL7Fuse
             Program.AddCommand("Start", "Start a server instance: Start {ServerName}", new Func<IBootstrap, string[], bool>(Program.StartCommand));
             Program.AddCommand("Stop", "Stop a server instance: Stop {ServerName}", new Func<IBootstrap, string[], bool>(Program.StopCommand));
         }
-
+#if NET48
         private static void RunAsController(string[] arguments)
         {
             if (arguments == null || arguments.Length < 2)
@@ -260,7 +306,7 @@ namespace HL7Fuse
                 }
             }
         }
-
+#endif
         private static bool ListCommand(IBootstrap bootstrap, string[] arguments)
         {
             foreach (IWorkItem workItem in bootstrap.AppServers)
@@ -357,14 +403,6 @@ namespace HL7Fuse
                     Program.ReadConsoleCommand(bootstrap);
                 }
             }
-        }
-
-        private static void RunAsService()
-        {
-            ServiceBase.Run(new ServiceBase[1]
-      {
-        (ServiceBase) new MainService()
-      });
         }
     }
 }
