@@ -46,8 +46,8 @@ namespace HL7Fuse
         {
             //Assembly ass0 = System.Reflection.Assembly.Load(@"D:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7\bin\Debug\net8.0\InITeC.Mdl.Integration.HL7.dll");
             //Assembly ass1 = System.Reflection.Assembly.Load(@"D:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7\bin\Debug\net48\InITeC.Mdl.Integration.HL7.dll");
-            Console.WriteLine("Please press a key to start...");
-            System.String exeArgTest = Console.ReadKey().KeyChar.ToString();
+            //Console.WriteLine("Please press a key to start...");
+            //System.String exeArgTest = Console.ReadKey().KeyChar.ToString();
             //String serviceName = ConfigurationManager.AppSettings["ServiceName"];
             if (Platform.IsMono && (int)Path.DirectorySeparatorChar == 47)
                 Program.ChangeScriptExecutable();
