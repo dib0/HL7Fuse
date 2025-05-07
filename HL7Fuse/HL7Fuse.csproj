@@ -31,9 +31,7 @@
     <AssemblyCopyright>Copyright © 2024</AssemblyCopyright>
     <ProjectGuid>4e4525b0-795c-4334-9c31-5c38a7e6acb1</ProjectGuid>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Net" />
@@ -51,12 +49,6 @@
     <Compile Update="MainService.cs">
       <SubType>Component</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj" />
-    <ProjectReference Include="..\HL7Fuse.Services\HL7Fuse.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.17" />
@@ -85,5 +77,9 @@ echo xcopy "$(SolutionDir)packages\SuperSocket.1.6.4\content\*.*" $(TargetDir)Co
   <ItemGroup>
     <Content Include="appsettings.Development.json" />
     <Content Include="appsettings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HL7Fuse.Logging\HL7Fuse.Logging.csproj" />
+    <ProjectReference Include="..\HL7Fuse.Services\HL7Fuse.Services.csproj" />
   </ItemGroup>
 </Project>

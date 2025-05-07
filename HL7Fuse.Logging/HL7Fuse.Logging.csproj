@@ -10,9 +10,9 @@
     <AssemblyInformationalVersion>$(AssemblyFileVersion)</AssemblyInformationalVersion>
     <Version>$(AssemblyFileVersion)</Version>
     <AssemblyTitle>HL7Fuse.Logging</AssemblyTitle>
-    <AssemblyDescription/>
-    <AssemblyConfiguration/>
-    <AssemblyCompany/>
+    <AssemblyDescription />
+    <AssemblyConfiguration />
+    <AssemblyCompany />
     <AssemblyProduct>HL7Fuse.Logging</AssemblyProduct>
     <AssemblyCopyright>Copyright © 2024</AssemblyCopyright>
     <ProjectGuid>1e9eaa7f-52ac-4f28-836e-dae5377ebf0a</ProjectGuid>
@@ -23,7 +23,7 @@
     </AssemblyAttribute>-->
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SuperSocket" Version="1.6.6.1" />
+    <PackageReference Include="SuperSocket.SocketBase" Version="1.6.8" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
       <PrivateAssets>all</PrivateAssets>
