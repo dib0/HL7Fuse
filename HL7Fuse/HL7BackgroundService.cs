@@ -35,7 +35,7 @@ namespace Hl7Fuse
                 Logger.Debug("HL7Fuse CreateBootstrap");
                 m_Bootstrap = BootstrapFactory.CreateBootstrap();
 
-                if (m_Bootstrap==null && !m_Bootstrap.Initialize())
+                if (m_Bootstrap==null || !m_Bootstrap.Initialize())
                     Logger.Error("Failed to initialize SuperSocket!");
                 else
                 {

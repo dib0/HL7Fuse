@@ -97,8 +97,8 @@ namespace HL7Fuse
                     {
                         options.ServiceName = ConfigurationManager.AppSettings["ServiceName"];
                     });
-                    IHost host = builder.Build();
                     builder.Services.AddHostedService<HL7BackgroundService>();
+                    IHost host = builder.Build();
                     host.Run();
                     Logger.Info("InITeC.Mdl.Synk-End");
 #endif
