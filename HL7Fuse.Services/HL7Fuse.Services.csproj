@@ -68,8 +68,8 @@
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
     <PackageReference Include="nhapi" Version="3.2.2" />
     <PackageReference Include="NHapiTools" Version="2.0.4" />
-    <PackageReference Include="SuperSocket.Facility" Version="1.6.7" />
-    <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.7" />
+    <PackageReference Include="SuperSocket.Facility" Version="1.6.8" />
+    <PackageReference Include="SuperSocket.SocketEngine" Version="1.6.8" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
       <PrivateAssets>all</PrivateAssets>

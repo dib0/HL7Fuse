@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FA8F74BD-6B65-4AB2-8C2D-EC7B8078AACC}"
 	ProjectSection(SolutionItems) = preProject
 		Solution Items\Release notes.txt = Solution Items\Release notes.txt
+		Solution Items\supersocket.facility.1.6.8.nupkg = Solution Items\supersocket.facility.1.6.8.nupkg
+		Solution Items\supersocket.socketbase.1.6.8.nupkg = Solution Items\supersocket.socketbase.1.6.8.nupkg
+		Solution Items\supersocket.socketengine.1.6.8.nupkg = Solution Items\supersocket.socketengine.1.6.8.nupkg
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HL7FuseWorkerRole", "HL7FuseWorkerRole\HL7FuseWorkerRole.csproj", "{05DC4B11-ABDF-483A-AB41-033035EDC315}"
