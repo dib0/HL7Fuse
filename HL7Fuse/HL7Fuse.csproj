@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net48</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -55,6 +55,7 @@
     <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Configuration.Xml" Version="8.0.1" />
     <PackageReference Condition="!$(NetFrameworks.contains('|$(TargetFramework)|'))" Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="MainService.cs">

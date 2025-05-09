@@ -28,6 +28,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Hl7Fuse;
 using System.ComponentModel;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.InteropServices;
+using System.Data.Common;
 #endif
 
 
@@ -44,11 +46,40 @@ namespace HL7Fuse
 
         private static void Main(string[] args)
         {
-            //Assembly ass0 = System.Reflection.Assembly.Load(@"D:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7\bin\Debug\net8.0\InITeC.Mdl.Integration.HL7.dll");
-            //Assembly ass1 = System.Reflection.Assembly.Load(@"D:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7\bin\Debug\net48\InITeC.Mdl.Integration.HL7.dll");
+#if NET8_0_OR_GREATER
+            AppDomain.CurrentDomain.AssemblyResolve += (sender, asm) =>
+            {
+                Assembly assembly = null;
+                var dirs = Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory).Concat(Directory.GetDirectories(Directory.GetCurrentDirectory())).ToList();
+                dirs.Insert(0, Directory.GetCurrentDirectory());
+                dirs.Insert(0, AppDomain.CurrentDomain.BaseDirectory);
+
+                foreach (var p in dirs.Select(i => Path.Combine(i, new AssemblyName(asm.Name).Name + ".dll")).Where(i => File.Exists(i)))
+                    try
+                    {
+                        assembly = Assembly.LoadFrom(p);
+                        //20250509 is not needed
+                        //if (asm.Name.StartsWith("Microsoft.Data.SqlClient"))
+                        //{
+                        //    var type = assembly.GetType(new AssemblyName(asm.Name).Name + ".SqlClientFactory");
+                        //    System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(type.TypeHandle);
+                        //    var ci = type.GetProperties(BindingFlags.Static | BindingFlags.Public);
+                        //}
+                        //20250509 is not needed
+                        break;
+                    }
+                    catch (Exception ex) { Logger.Error(ex.Message, ex); }
+
+                return assembly;
+            };
+            //DbProviderFactories.RegisterFactory("System.Data.SqlClient", typeof(System.Data.SqlClient.SqlClientFactory));
+            //bool bExist2 = DbProviderFactories.GetFactoryClasses().Rows.Find("System.Data.SqlClient") != null;
+            //var fact = DbProviderFactories.GetFactory("System.Data.SqlClient");
+            //Assembly ass0 = System.Reflection.Assembly.LoadFrom(@"InITeC.Mdl.Integration.HL7.dll");
             //Console.WriteLine("Please press a key to start...");
             //System.String exeArgTest = Console.ReadKey().KeyChar.ToString();
             //String serviceName = ConfigurationManager.AppSettings["ServiceName"];
+#endif
             if (Platform.IsMono && (int)Path.DirectorySeparatorChar == 47)
                 Program.ChangeScriptExecutable();
             if (!Platform.IsMono && !Environment.UserInteractive || Platform.IsMono && !AppDomain.CurrentDomain.FriendlyName.Equals(Path.GetFileName(Assembly.GetEntryAssembly().CodeBase)))
