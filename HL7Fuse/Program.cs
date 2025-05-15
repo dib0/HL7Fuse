@@ -57,7 +57,9 @@ namespace HL7Fuse
                 foreach (var p in dirs.Select(i => Path.Combine(i, new AssemblyName(asm.Name).Name + ".dll")).Where(i => File.Exists(i)))
                     try
                     {
+                        Logger.Info($"HL7Fuse-AssemblyResolve {p}: Loading From...");
                         assembly = Assembly.LoadFrom(p);
+                        Logger.Info($"HL7Fuse-AssemblyResolve {p}: Loaded");
                         //20250509 is not needed
                         //if (asm.Name.StartsWith("Microsoft.Data.SqlClient"))
                         //{
