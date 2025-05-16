@@ -80,6 +80,10 @@ namespace HL7Fuse
             Logger.Info($"HL7Fuse.AssemblyResolve->Assembly GetCurrentProcess:{Process.GetCurrentProcess().MainModule.FileName}");
             _strPathNetCoreForSharedComponent = @$"{System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName)}\Shared\Microsoft.AspNetCore.App\{Environment.Version.ToString()}";
             Logger.Info($"HL7Fuse.AssemblyResolve->Assembly PathNetCoreForSharedComponent:{_strPathNetCoreForSharedComponent}");
+            if (!System.IO.Directory.Exists(_strPathNetCoreForSharedComponent))
+                _strPathNetCoreForSharedComponent = @$"{Environment.ExpandEnvironmentVariables("%ProgramW6432%")}\DotNet\Shared\Microsoft.AspNetCore.App\{Environment.Version.ToString()}";
+            if (!System.IO.Directory.Exists(_strPathNetCoreForSharedComponent))
+                _strPathNetCoreForSharedComponent = null;
             if (SuperSocket.Common.Platform.IsMono && (int)Path.DirectorySeparatorChar == 47)
                 Program.ChangeScriptExecutable();
             if (!SuperSocket.Common.Platform.IsMono && !Environment.UserInteractive || SuperSocket.Common.Platform.IsMono && !AppDomain.CurrentDomain.FriendlyName.Equals(Path.GetFileName(Assembly.GetEntryAssembly().CodeBase)))
