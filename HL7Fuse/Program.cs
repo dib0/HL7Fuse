@@ -39,7 +39,7 @@ namespace HL7Fuse
     {
         private static Dictionary<string, ControlCommand> m_CommandHandlers = new Dictionary<string, ControlCommand>((IEqualityComparer<string>)StringComparer.OrdinalIgnoreCase);
         private static bool setConsoleColor;
-
+        private static System.String _strPathNetCoreForSharedComponent;
         static Program()
         {
         }
@@ -53,25 +53,20 @@ namespace HL7Fuse
                 var dirs = Directory.GetDirectories(AppDomain.CurrentDomain.BaseDirectory).Concat(Directory.GetDirectories(Directory.GetCurrentDirectory())).ToList();
                 dirs.Insert(0, Directory.GetCurrentDirectory());
                 dirs.Insert(0, AppDomain.CurrentDomain.BaseDirectory);
-
+                if (!System.String.IsNullOrEmpty(_strPathNetCoreForSharedComponent))
+                    dirs.Insert(0, _strPathNetCoreForSharedComponent);
+                AssemblyName assCurrent = new AssemblyName(asm.Name);
+                Logger.Info($"HL7Fuse.AssemblyResolve->Assembly to Load {assCurrent.Name}");
                 foreach (var p in dirs.Select(i => Path.Combine(i, new AssemblyName(asm.Name).Name + ".dll")).Where(i => File.Exists(i)))
                     try
                     {
-                        Logger.Info($"HL7Fuse-AssemblyResolve {p}: Loading From...");
                         assembly = Assembly.LoadFrom(p);
-                        Logger.Info($"HL7Fuse-AssemblyResolve {p}: Loaded");
-                        //20250509 is not needed
-                        //if (asm.Name.StartsWith("Microsoft.Data.SqlClient"))
-                        //{
-                        //    var type = assembly.GetType(new AssemblyName(asm.Name).Name + ".SqlClientFactory");
-                        //    System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(type.TypeHandle);
-                        //    var ci = type.GetProperties(BindingFlags.Static | BindingFlags.Public);
-                        //}
-                        //20250509 is not needed
+                        Logger.Info($"HL7Fuse.AssemblyResolve-> Assembly {assCurrent.Name} Loaded");
                         break;
                     }
                     catch (Exception ex) { Logger.Error(ex.Message, ex); }
-
+                if (assembly == null)
+                    Logger.Info($"HL7Fuse.AssemblyResolve-> Assembly {assCurrent.Name} Not Found!");
                 return assembly;
             };
             //DbProviderFactories.RegisterFactory("System.Data.SqlClient", typeof(System.Data.SqlClient.SqlClientFactory));
@@ -82,9 +77,12 @@ namespace HL7Fuse
             //System.String exeArgTest = Console.ReadKey().KeyChar.ToString();
             //String serviceName = ConfigurationManager.AppSettings["ServiceName"];
 #endif
-            if (Platform.IsMono && (int)Path.DirectorySeparatorChar == 47)
+            Logger.Info($"HL7Fuse.AssemblyResolve->Assembly GetCurrentProcess:{Process.GetCurrentProcess().MainModule.FileName}");
+            _strPathNetCoreForSharedComponent = @$"{System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName)}\Shared\Microsoft.AspNetCore.App\{Environment.Version.ToString()}";
+            Logger.Info($"HL7Fuse.AssemblyResolve->Assembly PathNetCoreForSharedComponent:{_strPathNetCoreForSharedComponent}");
+            if (SuperSocket.Common.Platform.IsMono && (int)Path.DirectorySeparatorChar == 47)
                 Program.ChangeScriptExecutable();
-            if (!Platform.IsMono && !Environment.UserInteractive || Platform.IsMono && !AppDomain.CurrentDomain.FriendlyName.Equals(Path.GetFileName(Assembly.GetEntryAssembly().CodeBase)))
+            if (!SuperSocket.Common.Platform.IsMono && !Environment.UserInteractive || SuperSocket.Common.Platform.IsMono && !AppDomain.CurrentDomain.FriendlyName.Equals(Path.GetFileName(Assembly.GetEntryAssembly().CodeBase)))
             {
                 try
                 {
