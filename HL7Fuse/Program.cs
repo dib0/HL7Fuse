@@ -56,17 +56,22 @@ namespace HL7Fuse
                 if (!System.String.IsNullOrEmpty(_strPathNetCoreForSharedComponent))
                     dirs.Insert(0, _strPathNetCoreForSharedComponent);
                 AssemblyName assCurrent = new AssemblyName(asm.Name);
-                Logger.Info($"HL7Fuse.AssemblyResolve->Assembly to Load {assCurrent.Name}");
+                Logger.Debug($"HL7Fuse.AssemblyResolve -> Assembly to Load {assCurrent.Name}");
                 foreach (var p in dirs.Select(i => Path.Combine(i, new AssemblyName(asm.Name).Name + ".dll")).Where(i => File.Exists(i)))
                     try
                     {
                         assembly = Assembly.LoadFrom(p);
-                        Logger.Info($"HL7Fuse.AssemblyResolve-> Assembly {assCurrent.Name} Loaded");
+                        Logger.Debug($"HL7Fuse.AssemblyResolve-> Assembly {assCurrent.Name} Loaded");
                         break;
                     }
                     catch (Exception ex) { Logger.Error(ex.Message, ex); }
-                if (assembly == null)
-                    Logger.Info($"HL7Fuse.AssemblyResolve-> Assembly {assCurrent.Name} Not Found!");
+                if (assembly == null) 
+                { 
+                    if (assCurrent.Name.ToLower().EndsWith(".resources"))
+                        Logger.Debug($"HL7Fuse.AssemblyResolve -> Assembly {assCurrent.Name} Not Found!");
+                    else
+                        Logger.Error($"HL7Fuse.AssemblyResolve -> Assembly {assCurrent.Name} Not Found!");
+                }
                 return assembly;
             };
             //DbProviderFactories.RegisterFactory("System.Data.SqlClient", typeof(System.Data.SqlClient.SqlClientFactory));
@@ -77,9 +82,9 @@ namespace HL7Fuse
             //System.String exeArgTest = Console.ReadKey().KeyChar.ToString();
             //String serviceName = ConfigurationManager.AppSettings["ServiceName"];
 #endif
-            Logger.Info($"HL7Fuse.AssemblyResolve->Assembly GetCurrentProcess:{Process.GetCurrentProcess().MainModule.FileName}");
+            Logger.Debug($"HL7Fuse.AssemblyResolve->Assembly GetCurrentProcess:{Process.GetCurrentProcess().MainModule.FileName}");
             _strPathNetCoreForSharedComponent = @$"{System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName)}\Shared\Microsoft.AspNetCore.App\{Environment.Version.ToString()}";
-            Logger.Info($"HL7Fuse.AssemblyResolve->Assembly PathNetCoreForSharedComponent:{_strPathNetCoreForSharedComponent}");
+            Logger.Debug($"HL7Fuse.AssemblyResolve->Assembly PathNetCoreForSharedComponent:{_strPathNetCoreForSharedComponent}");
             if (!System.IO.Directory.Exists(_strPathNetCoreForSharedComponent))
                 _strPathNetCoreForSharedComponent = @$"{Environment.ExpandEnvironmentVariables("%ProgramW6432%")}\DotNet\Shared\Microsoft.AspNetCore.App\{Environment.Version.ToString()}";
             if (!System.IO.Directory.Exists(_strPathNetCoreForSharedComponent))
