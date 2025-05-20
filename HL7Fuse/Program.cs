@@ -126,10 +126,9 @@ namespace HL7Fuse
                     Console.WriteLine("Welcome to HL7Fuse!");
                     Console.WriteLine("Please press a key to continue...");
                     Console.WriteLine("-[r]: Run this application as a console application;");
-#if NET48
                     Console.WriteLine("-[i]: Install this application as a Windows Service;");
                     Console.WriteLine("-[u]: Uninstall this Windows Service application;");
-#endif
+                    Console.WriteLine("-[q]: quit this application;");
                     string exeArg;
                     do
                     {
@@ -169,14 +168,10 @@ namespace HL7Fuse
         {
             switch (exeArg.ToLower())
             {
-#if NET48
                 case "i":
-                    SelfInstaller.InstallMe();
-                    return true;
+                    return !SelfInstaller.InstallMe();
                 case "u":
-                    SelfInstaller.UninstallMe();
-                    return true;
-#endif
+                    return !SelfInstaller.UninstallMe();
                 case "r":
                     Program.RunAsConsole();
                     return true;
@@ -185,6 +180,8 @@ namespace HL7Fuse
                     Program.RunAsController(startArgs);
                     return true;
 #endif
+                case "q":
+                    return true;
                 default:
                     Console.WriteLine("Invalid argument!");
                     return false;

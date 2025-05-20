@@ -4,7 +4,11 @@
 // Assembly location: C:\Source\HL7Fuse\Solution Items\SuperSocket\SuperSocket.SocketService.exe
 #if NET48
 using System.Configuration.Install;
+#endif
+using System;
 using System.Reflection;
+using System.Security.Cryptography.Xml;
+using System.ServiceProcess;
 
 namespace HL7Fuse
 {
@@ -20,12 +24,24 @@ namespace HL7Fuse
         {
             try
             {
-                ManagedInstallerClass.InstallHelper(new string[1]
-        {
-          SelfInstaller._exePath
-        });
+#if NET48
+               ManagedInstallerClass.InstallHelper(new string[1]
+                    {
+                      SelfInstaller._exePath
+                    });
+#else
+                System.Management.Automation.PowerShell ps = System.Management.Automation.PowerShell.Create();
+                //ps.AddCommand($"sc create \"{System.Configuration.ConfigurationManager.AppSettings["ServiceName"]}\" binpath= \"dotnet.exe {SelfInstaller._exePath}\"")
+                ps.AddCommand("sc")
+                    .AddArgument($"create")
+                    .AddArgument($"{System.Configuration.ConfigurationManager.AppSettings["ServiceName"]}")
+                    .AddParameter("binPath=", $"dotnet.exe {SelfInstaller._exePath}");
+                var res = ps.Invoke();
+                foreach (var entry in res)
+                    Console.WriteLine(entry.ToString());
+#endif
             }
-            catch
+            catch (Exception ex)
             {
                 return false;
             }
@@ -36,11 +52,21 @@ namespace HL7Fuse
         {
             try
             {
+#if NET48
                 ManagedInstallerClass.InstallHelper(new string[2]
-        {
-          "/u",
-          SelfInstaller._exePath
-        });
+                {
+                  "/u",
+                  SelfInstaller._exePath
+                });
+#else
+                System.Management.Automation.PowerShell ps = System.Management.Automation.PowerShell.Create();
+                ps.AddCommand("sc")
+                    .AddArgument($"delete")
+                    .AddArgument($"{System.Configuration.ConfigurationManager.AppSettings["ServiceName"]}");
+                var res = ps.Invoke();
+                foreach (var entry in res)
+                    Console.WriteLine(entry.ToString());
+#endif
             }
             catch
             {
@@ -50,4 +76,3 @@ namespace HL7Fuse
         }
     }
 }
-#endif
