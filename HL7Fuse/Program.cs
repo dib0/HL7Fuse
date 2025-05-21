@@ -169,9 +169,9 @@ namespace HL7Fuse
             switch (exeArg.ToLower())
             {
                 case "i":
-                    return !SelfInstaller.InstallMe();
+                    return SelfInstaller.InstallMe();
                 case "u":
-                    return !SelfInstaller.UninstallMe();
+                    return SelfInstaller.UninstallMe();
                 case "r":
                     Program.RunAsConsole();
                     return true;

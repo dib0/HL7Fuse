@@ -35,7 +35,9 @@ namespace HL7Fuse
                 ps.AddCommand("sc")
                     .AddArgument($"create")
                     .AddArgument($"{System.Configuration.ConfigurationManager.AppSettings["ServiceName"]}")
-                    .AddParameter("binPath=", $"dotnet.exe {SelfInstaller._exePath}");
+                    .AddParameter("binPath=", $"dotnet.exe \"{SelfInstaller._exePath}\"");
+                Console.WriteLine($"serviceName={System.Configuration.ConfigurationManager.AppSettings["ServiceName"]}");
+                Console.WriteLine($"exePath={SelfInstaller._exePath}");
                 var res = ps.Invoke();
                 foreach (var entry in res)
                     Console.WriteLine(entry.ToString());
