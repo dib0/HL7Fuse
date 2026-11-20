@@ -1,0 +1,6 @@
+@HL7FuseWebApi_HostAddress = http://localhost:5167
+
+GET {{HL7FuseWebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
