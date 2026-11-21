@@ -15,19 +15,21 @@ using System.Text;
 namespace HL7FuseWebApi.Controllers;
 
 [Authorize(AuthenticationSchemes = "Bearer")]
-[Produces("application/json")]
 [ApiController]
 [Route("api/[controller]")]
 public class HL7Controller : ControllerBase
 {
+    private readonly ILogger<HL7Controller> _logger;
     private readonly IConfiguration _configuration;
     private readonly IServiceProvider _serviceProvider;
-    public HL7Controller(IConfiguration configuration, IServiceProvider serviceProvider)
+    public HL7Controller(IConfiguration configuration, IServiceProvider serviceProvider, ILogger<HL7Controller> logger)
     {
         _configuration = configuration;
         _serviceProvider = serviceProvider;
+        _logger = logger;
     }
 
+    [Produces("application/json")]
     [AllowAnonymous]
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromForm] Login login)
@@ -75,12 +77,13 @@ public class HL7Controller : ControllerBase
 
     [Authorize]
     [HttpPost("send")]
+    [Produces("text/plain")]
     public async Task<IActionResult> Send([FromBody] String HL7Message)
     {
+        _logger.LogInformation("Ricevuto messaggio HL7 di {Length} caratteri", HL7Message.Length);
+
         if (string.IsNullOrWhiteSpace(HL7Message))
-        {
             return BadRequest(new { message = "Il messaggio HL7 non può essere vuoto." });
-        }
 
         PipeParser parser = new PipeParser();
         IMessage hl7ToProcessMessage = parser.Parse(HL7Message);
@@ -90,6 +93,7 @@ public class HL7Controller : ControllerBase
         if (string.IsNullOrWhiteSpace(assemblyName))
             return BadRequest("Configurazione 'commandAssemblies:assembly' mancante.");
 
+        ICommand<MLLPSession, HL7RequestInfo> commandInstance = null;
         // 2. Carica l'assembly
         Assembly assembly = Assembly.Load(assemblyName);
 
@@ -102,7 +106,7 @@ public class HL7Controller : ControllerBase
             return NotFound($"Nessuna classe che implementa {interfaceType.Name} trovata in {assemblyName}.");
 
         // 4. Istanzia la classe risolvendo eventuali dipendenze dal container DI
-        ICommand<MLLPSession, HL7RequestInfo> commandInstance = (ICommand<MLLPSession, HL7RequestInfo>)ActivatorUtilities.CreateInstance(_serviceProvider, targetType);
+        commandInstance = (ICommand<MLLPSession, HL7RequestInfo>)ActivatorUtilities.CreateInstance(_serviceProvider, targetType);
         HL7RequestInfo hL7RequestInfo = new HL7RequestInfo()
         {
              ErrorMessage = null,
@@ -110,14 +114,21 @@ public class HL7Controller : ControllerBase
              Message = hl7ToProcessMessage
         };
         commandInstance.ExecuteCommand(null, hL7RequestInfo);
+        //serve a scopo d itest
+        //hL7RequestInfo.ResponseMessage = hl7ToProcessMessage;
 
+        if (hL7RequestInfo.WasUnknownRequest)
+            return BadRequest("Was Unknown HL7 Request");
+        if (!String.IsNullOrEmpty(hL7RequestInfo.ErrorMessage))
+            return BadRequest($"Errore grave: {hL7RequestInfo.ErrorMessage}");
         // Qui inserirai la tua logica di parsing o inoltro del messaggio HL7
         await Task.CompletedTask;
-        return Ok(new
-        {
-            WasUnknownRequest = hL7RequestInfo.WasUnknownRequest,
-            ErrorMessage = hL7RequestInfo.ErrorMessage,
-            ResponseMessage = parser.Encode(hL7RequestInfo.ResponseMessage)
-        });
+        //return Ok(new
+        //{
+        //    WasUnknownRequest = hL7RequestInfo.WasUnknownRequest,
+        //    ErrorMessage = hL7RequestInfo.ErrorMessage,
+        //    ResponseMessage = parser.Encode(hL7RequestInfo.ResponseMessage)
+        //});
+        return Ok(parser.Encode(hL7RequestInfo.ResponseMessage));
     }
 }

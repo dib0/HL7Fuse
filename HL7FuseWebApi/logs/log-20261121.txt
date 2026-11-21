@@ -1,0 +1,286 @@
+2026-11-21 21:03:24.797 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:03:27.024 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:03:27.032 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:03:27.845 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:03:28.041 [INF] Hosting environment: Development
+2026-11-21 21:03:28.158 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:09:01.459 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:09:01.658 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:09:01.723 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:09:08.123 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:09:08.142 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 6410.8527ms
+2026-11-21 21:09:08.145 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:09:08.150 [INF] HTTP POST /api/hl7/login responded 200 in 6622.0923 ms
+2026-11-21 21:09:08.156 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 6709.1848ms
+2026-11-21 21:09:08.240 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:09:08.326 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:09:08.336 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:09:13.764 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:15:50.151 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:15:50.813 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:15:50.816 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:15:50.878 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:15:50.880 [INF] Hosting environment: Development
+2026-11-21 21:15:50.881 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:16:18.939 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:16:19.056 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:16:19.112 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:16:20.293 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:16:20.313 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 1193.2555ms
+2026-11-21 21:16:20.316 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:16:20.319 [INF] HTTP POST /api/hl7/login responded 200 in 1325.4755 ms
+2026-11-21 21:16:20.327 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 1398.4325ms
+2026-11-21 21:16:20.344 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:16:20.417 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:16:20.428 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:16:23.423 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:18:08.634 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:18:09.402 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:18:09.417 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:18:09.697 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:18:09.707 [INF] Hosting environment: Development
+2026-11-21 21:18:09.731 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:19:56.768 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:19:56.932 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:19:57.019 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:19:59.154 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:19:59.189 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 2140.096ms
+2026-11-21 21:19:59.194 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:19:59.206 [INF] HTTP POST /api/hl7/login responded 200 in 2368.1294 ms
+2026-11-21 21:19:59.214 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 2458.9778ms
+2026-11-21 21:19:59.311 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:19:59.426 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:19:59.440 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:20:03.537 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:32:00.583 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:32:01.115 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:32:01.118 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:32:01.185 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:32:01.187 [INF] Hosting environment: Development
+2026-11-21 21:32:01.190 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:32:31.663 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:32:31.750 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:32:31.797 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:32:33.183 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:32:33.200 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 1395.9332ms
+2026-11-21 21:32:33.203 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:32:33.207 [INF] HTTP POST /api/hl7/login responded 200 in 1504.8239 ms
+2026-11-21 21:32:33.213 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 1555.3328ms
+2026-11-21 21:32:33.265 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:32:33.327 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:32:33.337 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:32:36.006 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:42:46.784 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:42:47.212 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:42:47.215 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:42:47.748 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:42:47.750 [INF] Hosting environment: Development
+2026-11-21 21:42:47.753 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:43:59.618 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:43:59.704 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:43:59.749 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:44:01.272 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:44:01.290 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 1534.9395ms
+2026-11-21 21:44:01.293 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:44:01.297 [INF] HTTP POST /api/hl7/login responded 200 in 1639.4704 ms
+2026-11-21 21:44:01.304 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 1690.2602ms
+2026-11-21 21:44:01.375 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:44:01.447 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:44:01.454 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:44:02.230 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:55:37.858 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:55:38.179 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:55:38.182 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:55:38.221 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:55:38.223 [INF] Hosting environment: Development
+2026-11-21 21:55:38.224 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:55:48.908 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:55:49.219 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:55:49.221 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:55:49.265 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:55:49.267 [INF] Hosting environment: Development
+2026-11-21 21:55:49.268 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:56:21.527 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:56:21.614 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:56:21.649 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:56:23.352 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:56:23.370 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 1713.1946ms
+2026-11-21 21:56:23.372 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:56:23.377 [INF] HTTP POST /api/hl7/login responded 200 in 1807.9107 ms
+2026-11-21 21:56:23.384 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 1862.3033ms
+2026-11-21 21:56:23.458 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:56:23.533 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:56:23.541 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:56:26.013 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:57:22.638 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi) in 59094.3133ms
+2026-11-21 21:57:22.641 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:57:22.642 [ERR] HTTP POST /api/hl7/send responded 500 in 59178.2670 ms
+System.InvalidOperationException: Must set an ExceptionManager in the ExceptionPolicy class using the SetExceptionManager method.
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.EnsureManager()
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(Exception exceptionToHandle, String policyName)
+   at InITeC.Mdl.Synk.Doc.In.HL7.MessageFactoryBase..ctor() in C:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7.In\MessageFactoryBase.cs:line 78
+   at InITeC.Mdl.Synk.Doc.In.HL7.MessageFactoryBaseMLLP..ctor() in C:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7.In\MessageFactoryBase.cs:line 35
+   at InITeC.Mdl.Synk.Doc.In.HL7.V25.MessageFactoryMLLP..ctor()
+   at InvokeStub_MessageFactoryMLLP..ctor(Object, Object, Object, Object, Object)
+   at System.Reflection.ConstructorInvoker.InvokeImpl(Object arg1, Object arg2, Object arg3, Object arg4)
+   at System.Reflection.ConstructorInvoker.Invoke(Span`1 arguments)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at HL7FuseWebApi.Controllers.HL7Controller.Send(String HL7Message) in C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi\Controllers\HL7Controller.cs:line 109
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-21 21:57:22.737 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Must set an ExceptionManager in the ExceptionPolicy class using the SetExceptionManager method.
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.EnsureManager()
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(Exception exceptionToHandle, String policyName)
+   at InITeC.Mdl.Synk.Doc.In.HL7.MessageFactoryBase..ctor() in C:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7.In\MessageFactoryBase.cs:line 78
+   at InITeC.Mdl.Synk.Doc.In.HL7.MessageFactoryBaseMLLP..ctor() in C:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7.In\MessageFactoryBase.cs:line 35
+   at InITeC.Mdl.Synk.Doc.In.HL7.V25.MessageFactoryMLLP..ctor()
+   at InvokeStub_MessageFactoryMLLP..ctor(Object, Object, Object, Object, Object)
+   at System.Reflection.ConstructorInvoker.InvokeImpl(Object arg1, Object arg2, Object arg3, Object arg4)
+   at System.Reflection.ConstructorInvoker.Invoke(Span`1 arguments)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at HL7FuseWebApi.Controllers.HL7Controller.Send(String HL7Message) in C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi\Controllers\HL7Controller.cs:line 109
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-21 21:57:23.458 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/send - 500 null text/plain; charset=utf-8 60000.1618ms
+2026-11-21 21:57:43.508 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 21:57:43.830 [INF] Now listening on: https://localhost:7178
+2026-11-21 21:57:43.833 [INF] Now listening on: http://localhost:5167
+2026-11-21 21:57:43.884 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 21:57:43.886 [INF] Hosting environment: Development
+2026-11-21 21:57:43.887 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 21:58:26.828 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 21:58:26.943 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:58:27.006 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:58:28.041 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 21:58:28.068 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 1053.258ms
+2026-11-21 21:58:28.071 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 21:58:28.075 [INF] HTTP POST /api/hl7/login responded 200 in 1200.1735 ms
+2026-11-21 21:58:28.082 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 1261.1512ms
+2026-11-21 21:58:28.151 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 21:58:28.227 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:58:28.242 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 21:58:29.192 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 21:59:18.770 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi) in 50526.0877ms
+2026-11-21 21:59:18.811 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 21:59:18.891 [ERR] HTTP POST /api/hl7/send responded 500 in 50735.0656 ms
+System.InvalidOperationException: Must set an ExceptionManager in the ExceptionPolicy class using the SetExceptionManager method.
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.EnsureManager()
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(Exception exceptionToHandle, String policyName)
+   at InITeC.Mdl.Synk.Doc.In.HL7.MessageFactoryBase.ExecuteCommand(MLLPSession session, HL7RequestInfo requestInfo) in C:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7.In\MessageFactoryBase.cs:line 173
+   at HL7FuseWebApi.Controllers.HL7Controller.Send(String HL7Message) in C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi\Controllers\HL7Controller.cs:line 116
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-11-21 21:59:18.979 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Must set an ExceptionManager in the ExceptionPolicy class using the SetExceptionManager method.
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.EnsureManager()
+   at Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.ExceptionPolicy.HandleException(Exception exceptionToHandle, String policyName)
+   at InITeC.Mdl.Synk.Doc.In.HL7.MessageFactoryBase.ExecuteCommand(MLLPSession session, HL7RequestInfo requestInfo) in C:\Dati\VSNetPrj\InITeC.Mdl.SynkLaboratorio\InITeC.Mdl.Integration.HL7.In\MessageFactoryBase.cs:line 173
+   at HL7FuseWebApi.Controllers.HL7Controller.Send(String HL7Message) in C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi\Controllers\HL7Controller.cs:line 116
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-11-21 21:59:19.871 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/send - 500 null text/plain; charset=utf-8 51720.5234ms
+2026-11-21 22:04:21.636 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 22:04:22.333 [INF] Now listening on: https://localhost:7178
+2026-11-21 22:04:22.338 [INF] Now listening on: http://localhost:5167
+2026-11-21 22:04:22.421 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 22:04:22.424 [INF] Hosting environment: Development
+2026-11-21 22:04:22.426 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 22:04:36.332 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 22:04:36.416 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 22:04:36.459 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 22:04:37.007 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 22:04:37.024 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 559.1661ms
+2026-11-21 22:04:37.026 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 22:04:37.030 [INF] HTTP POST /api/hl7/login responded 200 in 656.6359 ms
+2026-11-21 22:04:37.035 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 708.212ms
+2026-11-21 22:04:37.094 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 22:04:37.157 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 22:04:37.164 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 22:04:39.087 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 22:05:04.160 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-11-21 22:05:04.163 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi) in 26996.533ms
+2026-11-21 22:05:04.165 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 22:05:04.167 [INF] HTTP POST /api/hl7/send responded 200 in 27068.5842 ms
+2026-11-21 22:05:04.169 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/send - 200 null text/plain; charset=utf-8 27075.5356ms
+2026-11-21 22:06:37.228 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 22:06:37.620 [INF] Now listening on: https://localhost:7178
+2026-11-21 22:06:37.623 [INF] Now listening on: http://localhost:5167
+2026-11-21 22:06:37.672 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 22:06:37.673 [INF] Hosting environment: Development
+2026-11-21 22:06:37.674 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 22:06:44.743 [INF] User profile is available. Using 'C:\Users\Fabio.Borghi.INITEC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-21 22:06:45.072 [INF] Now listening on: https://localhost:7178
+2026-11-21 22:06:45.075 [INF] Now listening on: http://localhost:5167
+2026-11-21 22:06:45.115 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-21 22:06:45.117 [INF] Hosting environment: Development
+2026-11-21 22:06:45.118 [INF] Content root path: C:\Dati\GitHub\HL7Fuse\HL7FuseWebApi
+2026-11-21 22:07:09.894 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/login - application/x-www-form-urlencoded 193
+2026-11-21 22:07:09.983 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 22:07:10.021 [INF] Route matched with {action = "Login", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(HL7FuseWebApi.Models.Login) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 22:07:12.042 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-11-21 22:07:12.060 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi) in 2032.3998ms
+2026-11-21 22:07:12.063 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Login (HL7FuseWebApi)'
+2026-11-21 22:07:12.067 [INF] HTTP POST /api/hl7/login responded 200 in 2134.5041 ms
+2026-11-21 22:07:12.073 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/login - 200 null application/json; charset=utf-8 2186.2942ms
+2026-11-21 22:07:12.135 [INF] Request starting HTTP/1.1 POST https://localhost:7178/api/hl7/send - application/hl7-v2; charset=utf-8 1776
+2026-11-21 22:07:12.202 [INF] Executing endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 22:07:12.216 [INF] Route matched with {action = "Send", controller = "HL7"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Send(System.String) on controller HL7FuseWebApi.Controllers.HL7Controller (HL7FuseWebApi).
+2026-11-21 22:07:17.670 [INF] Ricevuto messaggio HL7 di 1776 caratteri
+2026-11-21 22:07:41.446 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-11-21 22:07:41.449 [INF] Executed action HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi) in 29230.3565ms
+2026-11-21 22:07:41.451 [INF] Executed endpoint 'HL7FuseWebApi.Controllers.HL7Controller.Send (HL7FuseWebApi)'
+2026-11-21 22:07:41.452 [INF] HTTP POST /api/hl7/send responded 200 in 29312.1711 ms
+2026-11-21 22:07:41.455 [INF] Request finished HTTP/1.1 POST https://localhost:7178/api/hl7/send - 200 null text/plain; charset=utf-8 29319.4114ms

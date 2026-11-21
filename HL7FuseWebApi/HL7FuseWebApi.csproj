@@ -9,10 +9,18 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.15" />
+    <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HL7Fuse.Services\HL7Fuse.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="InITeC.Mdl.Synk.Doc.In.HL7">
+      <HintPath>bin\Debug\net10.0\InITeC.Mdl.Synk.Doc.In.HL7.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
